@@ -20,22 +20,17 @@ PODS:
   - AFNetworking/UIKit (2.3.1):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
-  - BeamMusicPlayerViewController (0.2.1):
-    - BeamMusicPlayerViewController/MediaPlayer
-    - OBSlider (~> 1.1)
-  - BeamMusicPlayerViewController/MediaPlayer (0.2.1):
-    - OBSlider (~> 1.1)
   - HysteriaPlayer (2.0.0)
   - IPSqueezableViewController (0.0.1)
-  - OBSlider (1.1.0)
+  - NyaruDB (1.4.2)
   - StaticDataTableViewController (2.0.3)
   - SVProgressHUD (HEAD based on 1.0)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
-  - BeamMusicPlayerViewController
   - HysteriaPlayer (~> 2.0.0)
   - IPSqueezableViewController
+  - NyaruDB
   - StaticDataTableViewController (from `git@github.com:xelvenone/StaticDataTableViewController.git`)
   - SVProgressHUD (HEAD)
 
@@ -45,10 +40,9 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AFNetworking: 6d7b76aa5d04c8c37daad3eef4b7e3f2a7620da3
-  BeamMusicPlayerViewController: acbfa705ca2847bce13520b185bf3f36f5ff8399
   HysteriaPlayer: a0a7a5964089787acb84a9cfd53c0be34687d390
   IPSqueezableViewController: e3d263372f1442c8fb594388014c4107edcf7b86
-  OBSlider: 3536461f3dd47dfcbd0972c5aafb88aa7081fb79
+  NyaruDB: 188fc7e865cf14c93258a80c20413ab0c734555c
   StaticDataTableViewController: 5c46c12bd116e7a8bab4e3b6de5255ae4fa97e5b
   SVProgressHUD: 5034c6e22b8c2ca3e09402e48d41ed0340aa1c50
 

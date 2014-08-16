@@ -13,11 +13,14 @@
 + (instancetype)initFromDictionary:(NSDictionary *)dict
 {
     LAMShow *show = [LAMShow new];
+    show.key = dict[@"id"];
     show.type = dict[@"type"];
     show.title = dict[@"title"];
+    show.subtitle = dict[@"subtitle"];
     show.detail = dict[@"detail"];
     show.audio = dict[@"audio"];
     show.date = dict[@"date"];
+    show.host = dict[@"host"];
     show.status = LAMSHOWSTAT_TODOWNLOAD;
     return show;
 }

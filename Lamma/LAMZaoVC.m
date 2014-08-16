@@ -10,9 +10,6 @@
 #import "LAMShow.h"
 #import "LAMPlayerVC.h"
 
-#import <AFNetworking.h>
-#import <SVProgressHUD.h>
-
 @interface LAMZaoVC ()
 
 @property (nonatomic, strong) NSArray *shows;

@@ -1,5 +1,5 @@
 //
-//  LAMSignupVC.h
+//  LAMQiVC.h
 //  Lamma
 //
 //  Created by AquarHEAD L. on 8/16/14.
@@ -7,8 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <StaticDataTableViewController.h>
 
-@interface LAMSignupVC : StaticDataTableViewController
+@interface LAMQiVC : UITableViewController
 
 @end

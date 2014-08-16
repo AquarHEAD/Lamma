@@ -14,11 +14,14 @@
 
 @interface LAMShow : NSObject
 
+@property (nonatomic, strong) NSString *key;
 @property (nonatomic, strong) NSString *type;
 @property (nonatomic, strong) NSString *title;
+@property (nonatomic, strong) NSString *subtitle;
 @property (nonatomic, strong) NSString *detail;
 @property (nonatomic, strong) NSString *audio;
 @property (nonatomic, strong) NSDate *date;
+@property (nonatomic, strong) NSString *host;
 @property (nonatomic) NSUInteger status;
 
 + (instancetype)initFromDictionary:(NSDictionary *)dict;

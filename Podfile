@@ -5,5 +5,5 @@ pod 'AFNetworking', '~> 2.0'
 pod 'IPSqueezableViewController'
 pod 'HysteriaPlayer', '~> 2.0.0'
 pod 'SVProgressHUD', :head
-pod 'BeamMusicPlayerViewController'
 pod 'StaticDataTableViewController', :git => 'git@github.com:xelvenone/StaticDataTableViewController.git'
+pod 'NyaruDB'

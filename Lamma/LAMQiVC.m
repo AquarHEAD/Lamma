@@ -1,21 +1,23 @@
 //
-//  LAMHostListVC.m
+//  LAMQiVC.m
 //  Lamma
 //
 //  Created by AquarHEAD L. on 8/16/14.
 //  Copyright (c) 2014 ElaWorkshop. All rights reserved.
 //
 
-#import "LAMHostListVC.h"
+#import "LAMQiVC.h"
 #import "LAMShow.h"
+#import "LAMPlayerVC.h"
 
-@interface LAMHostListVC ()
+@interface LAMQiVC ()
 
 @property (nonatomic, strong) NSArray *shows;
+@property (nonatomic) NSUInteger selectedIndex;
 
 @end
 
-@implementation LAMHostListVC
+@implementation LAMQiVC
 
 - (void)viewDidLoad
 {
@@ -23,11 +25,10 @@
     UIRefreshControl *refControl = [UIRefreshControl new];
     [refControl addTarget:self action:@selector(refresh:) forControlEvents:UIControlEventValueChanged];
     self.refreshControl = refControl;
-    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 
     NyaruDB *db = [NyaruDB instance];
     NyaruCollection *col = [db collection:@"shows"];
-    if ([[col where:@"type" equal:@"zao"] count] == 0) {
+    if ([[col where:@"type" equal:@"qi"] count] == 0) {
         [self refresh:self.refreshControl];
     }
     else {
@@ -42,7 +43,7 @@
         [SVProgressHUD setStatus:@"载入中..."];
         AFHTTPRequestOperationManager *man = [AFHTTPRequestOperationManager manager];
         NSString *reqAddr = [NSString stringWithFormat:@"%@/shows/", LAMSERVER];
-        [man GET:reqAddr parameters:@{@"type": @"zao"} success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        [man GET:reqAddr parameters:@{@"type": @"qi"} success:^(AFHTTPRequestOperation *operation, id responseObject) {
             NyaruDB *db = [NyaruDB instance];
             NyaruCollection *col = [db collection:@"shows"];
             for (NSDictionary *dict in responseObject) {
@@ -64,7 +65,7 @@
     NSMutableArray *temp = [NSMutableArray new];
     NyaruDB *db = [NyaruDB instance];
     NyaruCollection *col = [db collection:@"shows"];
-    NSArray *docs = [[col where:@"type" equal:@"zao"] fetch];
+    NSArray *docs = [[col where:@"type" equal:@"qi"] fetch];
     for (NSDictionary *doc in docs) {
         [temp addObject:[LAMShow initFromDictionary:doc]];
     }
@@ -86,45 +87,32 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSDictionary *hostImage = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        hostImage = @{@"zhang": @"253-person",
-                      @"li": @"71-compass"};
-    });
-
     LAMShow *thisShow = self.shows[indexPath.row];
 
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-    cell.imageView.image =[UIImage imageNamed:hostImage[thisShow.host]];
-    cell.textLabel.text = thisShow.title;
-    cell.detailTextLabel.text = thisShow.subtitle;
-    cell.detailTextLabel.textColor = [UIColor lightGrayColor];
-
     if (indexPath.row % 2 == 1) {
         cell.backgroundColor = [UIColor colorWithRed:145.0/255.0 green:152.0/255.0 blue:159.0/255.0 alpha:0.05];
     }
     else {
         cell.backgroundColor = [UIColor whiteColor];
     }
+    cell.textLabel.text = thisShow.title;
+    cell.detailTextLabel.text = thisShow.subtitle;
 
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [self performSegueWithIdentifier:@"toHostZao" sender:self];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    self.selectedIndex = indexPath.row;
+    [self performSegueWithIdentifier:@"toPlayer" sender:self];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    //    LAMPlayerVC *vc = [segue destinationViewController];
+    //    vc.show = self.shows[self.selectedIndex];
 }
-*/
 
 @end

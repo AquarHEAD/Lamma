@@ -7,7 +7,6 @@
 //
 
 #import "LAMAppDelegate.h"
-#import <SVProgressHUD.h>
 
 @implementation LAMAppDelegate
 
@@ -16,6 +15,12 @@
     // Override point for customization after application launch.
     [SVProgressHUD setBackgroundColor:[UIColor lightGrayColor]];
     [SVProgressHUD setForegroundColor:[UIColor whiteColor]];
+
+    NyaruDB *db = [NyaruDB instance];
+    NyaruCollection *col = [db collection:@"shows"];
+    [col createIndex:@"type"];
+    [col createIndex:@"host"];
+
     return YES;
 }
 							
