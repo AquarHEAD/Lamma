@@ -29,6 +29,7 @@ PODS:
   - IPSqueezableViewController (0.0.1)
   - JGProgressHUD (1.0.2)
   - OBSlider (1.1.0)
+  - StaticDataTableViewController (2.0.3)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
@@ -36,6 +37,11 @@ DEPENDENCIES:
   - HysteriaPlayer (~> 2.0.0)
   - IPSqueezableViewController
   - JGProgressHUD (= 1.0.2)
+  - StaticDataTableViewController (from `git@github.com:xelvenone/StaticDataTableViewController.git`)
+
+EXTERNAL SOURCES:
+  StaticDataTableViewController:
+    :git: git@github.com:xelvenone/StaticDataTableViewController.git
 
 SPEC CHECKSUMS:
   AFNetworking: 6d7b76aa5d04c8c37daad3eef4b7e3f2a7620da3
@@ -44,5 +50,6 @@ SPEC CHECKSUMS:
   IPSqueezableViewController: e3d263372f1442c8fb594388014c4107edcf7b86
   JGProgressHUD: 97fc8c04c72eff2eb8d13bf7ff79e2cace617c9f
   OBSlider: 3536461f3dd47dfcbd0972c5aafb88aa7081fb79
+  StaticDataTableViewController: 5c46c12bd116e7a8bab4e3b6de5255ae4fa97e5b
 
 COCOAPODS: 0.33.1
