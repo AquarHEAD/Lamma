@@ -14,6 +14,7 @@
 		4F8F4796199F7A0A004EB27A /* LAMShuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F8F4795199F7A0A004EB27A /* LAMShuVC.m */; };
 		4F8F4799199F88C5004EB27A /* LAMQiVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F8F4798199F88C5004EB27A /* LAMQiVC.m */; };
 		4F8F479C199F8A83004EB27A /* LAMJuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F8F479B199F8A83004EB27A /* LAMJuVC.m */; };
+		4F8F47A2199FA62A004EB27A /* LAMTabMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F8F47A1199FA62A004EB27A /* LAMTabMainVC.m */; };
 		4F948FC3199283CD00265DF0 /* LAMShow.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F948FC2199283CD00265DF0 /* LAMShow.m */; };
 		4F948FC6199283F500265DF0 /* LAMPlayerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F948FC5199283F500265DF0 /* LAMPlayerVC.m */; };
 		4FB7D0431993BE00006DB7C8 /* LAMZaoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB7D0421993BE00006DB7C8 /* LAMZaoVC.m */; };
@@ -57,6 +58,8 @@
 		4F8F4798199F88C5004EB27A /* LAMQiVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LAMQiVC.m; sourceTree = "<group>"; };
 		4F8F479A199F8A83004EB27A /* LAMJuVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAMJuVC.h; sourceTree = "<group>"; };
 		4F8F479B199F8A83004EB27A /* LAMJuVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LAMJuVC.m; sourceTree = "<group>"; };
+		4F8F47A0199FA62A004EB27A /* LAMTabMainVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAMTabMainVC.h; sourceTree = "<group>"; };
+		4F8F47A1199FA62A004EB27A /* LAMTabMainVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LAMTabMainVC.m; sourceTree = "<group>"; };
 		4F948FC1199283CD00265DF0 /* LAMShow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAMShow.h; sourceTree = "<group>"; };
 		4F948FC2199283CD00265DF0 /* LAMShow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LAMShow.m; sourceTree = "<group>"; };
 		4F948FC4199283F500265DF0 /* LAMPlayerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAMPlayerVC.h; sourceTree = "<group>"; };
@@ -130,6 +133,33 @@
 			name = Zao;
 			sourceTree = "<group>";
 		};
+		4F8F479D199FA5EF004EB27A /* Shu */ = {
+			isa = PBXGroup;
+			children = (
+				4F8F4794199F7A0A004EB27A /* LAMShuVC.h */,
+				4F8F4795199F7A0A004EB27A /* LAMShuVC.m */,
+			);
+			name = Shu;
+			sourceTree = "<group>";
+		};
+		4F8F479E199FA5F6004EB27A /* Qi */ = {
+			isa = PBXGroup;
+			children = (
+				4F8F4797199F88C5004EB27A /* LAMQiVC.h */,
+				4F8F4798199F88C5004EB27A /* LAMQiVC.m */,
+			);
+			name = Qi;
+			sourceTree = "<group>";
+		};
+		4F8F479F199FA5FB004EB27A /* Ju */ = {
+			isa = PBXGroup;
+			children = (
+				4F8F479A199F8A83004EB27A /* LAMJuVC.h */,
+				4F8F479B199F8A83004EB27A /* LAMJuVC.m */,
+			);
+			name = Ju;
+			sourceTree = "<group>";
+		};
 		4F948FC7199283FE00265DF0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,13 +174,12 @@
 		4FB7D04419943297006DB7C8 /* Tabs */ = {
 			isa = PBXGroup;
 			children = (
+				4F8F47A0199FA62A004EB27A /* LAMTabMainVC.h */,
+				4F8F47A1199FA62A004EB27A /* LAMTabMainVC.m */,
 				4F8F4793199F79EE004EB27A /* Zao */,
-				4F8F4794199F7A0A004EB27A /* LAMShuVC.h */,
-				4F8F4795199F7A0A004EB27A /* LAMShuVC.m */,
-				4F8F4797199F88C5004EB27A /* LAMQiVC.h */,
-				4F8F4798199F88C5004EB27A /* LAMQiVC.m */,
-				4F8F479A199F8A83004EB27A /* LAMJuVC.h */,
-				4F8F479B199F8A83004EB27A /* LAMJuVC.m */,
+				4F8F479D199FA5EF004EB27A /* Shu */,
+				4F8F479E199FA5F6004EB27A /* Qi */,
+				4F8F479F199FA5FB004EB27A /* Ju */,
 			);
 			name = Tabs;
 			sourceTree = "<group>";
@@ -391,6 +420,7 @@
 				4F948FC6199283F500265DF0 /* LAMPlayerVC.m in Sources */,
 				4FD8683B1967B2AD006A1994 /* LAMAppDelegate.m in Sources */,
 				4F948FC3199283CD00265DF0 /* LAMShow.m in Sources */,
+				4F8F47A2199FA62A004EB27A /* LAMTabMainVC.m in Sources */,
 				4F8F4796199F7A0A004EB27A /* LAMShuVC.m in Sources */,
 				4F8F4799199F88C5004EB27A /* LAMQiVC.m in Sources */,
 				4F8F479C199F8A83004EB27A /* LAMJuVC.m in Sources */,

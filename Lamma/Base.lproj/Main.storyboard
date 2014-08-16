@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--Tab Bar Controller-->
+        <!--Tab MainVC-->
         <scene sceneID="eKT-6E-tqZ">
             <objects>
-                <tabBarController definesPresentationContext="YES" id="b67-Em-Fcs" sceneMemberID="viewController">
+                <tabBarController definesPresentationContext="YES" id="b67-Em-Fcs" customClass="LAMTabMainVC" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="xgg-Xq-gcS">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
@@ -16,12 +16,12 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="9c2-NN-beR" kind="modal" identifier="openSignup" id="UTr-iw-aje"/>
                         <segue destination="P0X-JD-nqW" kind="relationship" relationship="viewControllers" id="7GR-7e-NxX"/>
                         <segue destination="iBZ-FG-pDc" kind="relationship" relationship="viewControllers" id="Ptq-Ox-eHq"/>
                         <segue destination="E7I-zp-rup" kind="relationship" relationship="viewControllers" id="0Lk-qf-2xT"/>
                         <segue destination="jv1-jy-7S1" kind="relationship" relationship="viewControllers" id="6uR-IQ-An4"/>
                         <segue destination="9lj-dh-TfM" kind="relationship" relationship="viewControllers" id="KbB-hU-Jrl"/>
+                        <segue destination="9c2-NN-beR" kind="modal" identifier="openSignup" id="bJ9-jG-ghn"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="26G-rf-0eh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -137,7 +137,7 @@
         <scene sceneID="Wb4-Bt-MpD">
             <objects>
                 <navigationController definesPresentationContext="YES" id="E7I-zp-rup" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="播放中" image="30-circle-play" id="3Iu-By-48X"/>
+                    <tabBarItem key="tabBarItem" title="播放中" image="275-broadcast" id="3Iu-By-48X"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="OS0-qJ-mfP">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -252,10 +252,10 @@
             </objects>
             <point key="canvasLocation" x="1213" y="-681"/>
         </scene>
-        <!--Table View Controller-->
+        <!--SignupVC-->
         <scene sceneID="lK2-EY-ovY">
             <objects>
-                <tableViewController id="iyr-VL-XuS" sceneMemberID="viewController">
+                <tableViewController id="iyr-VL-XuS" customClass="LAMSignupVC" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="j3n-Kh-upC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -277,7 +277,7 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="张三" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TPG-lp-0JB">
+                                                <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="username" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TPG-lp-0JB">
                                                     <rect key="frame" x="119" y="7" width="190" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -300,7 +300,7 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LcX-3j-fEi">
+                                                <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LcX-3j-fEi">
                                                     <rect key="frame" x="119" y="7" width="190" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -323,7 +323,7 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1234567890" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EDh-vP-h7c">
+                                                <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="phone" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EDh-vP-h7c">
                                                     <rect key="frame" x="119" y="7" width="190" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -375,6 +375,9 @@
                                                     <state key="normal" title="获取验证码">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="getCode:" destination="iyr-VL-XuS" eventType="touchUpInside" id="oBY-Um-S4g"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -393,7 +396,7 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1234567890" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rca-I2-56a">
+                                                <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="code" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rca-I2-56a">
                                                     <rect key="frame" x="119" y="7" width="190" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -420,6 +423,9 @@
                                                     <state key="normal" title="提交">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="submit:" destination="iyr-VL-XuS" eventType="touchUpInside" id="jbw-UT-E4i"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -441,8 +447,24 @@
                                 <segment title="注册"/>
                                 <segment title="登录"/>
                             </segments>
+                            <connections>
+                                <action selector="funcSegChanged:" destination="iyr-VL-XuS" eventType="valueChanged" id="Rq2-Hf-wlj"/>
+                            </connections>
                         </segmentedControl>
                     </navigationItem>
+                    <connections>
+                        <outlet property="codeCell" destination="4Ft-3T-Rpw" id="D66-63-vcW"/>
+                        <outlet property="codeField" destination="Rca-I2-56a" id="QN6-dg-pcM"/>
+                        <outlet property="funcSeg" destination="gJq-AR-gEB" id="6tG-UG-jQL"/>
+                        <outlet property="genderSeg" destination="waM-yf-yOU" id="l8f-IH-wL1"/>
+                        <outlet property="passwordField" destination="LcX-3j-fEi" id="tye-wZ-nlc"/>
+                        <outlet property="phoneField" destination="EDh-vP-h7c" id="R4u-YA-N7G"/>
+                        <outlet property="usernameField" destination="TPG-lp-0JB" id="mhq-Do-JaR"/>
+                        <outletCollection property="signupCells" destination="0ow-ea-V1c" id="Yuv-ko-GgL"/>
+                        <outletCollection property="signupCells" destination="HUs-4p-eXx" id="jiE-Zz-yoP"/>
+                        <outletCollection property="signupCells" destination="AuB-ap-I6v" id="00A-uw-oPZ"/>
+                        <outletCollection property="signupCells" destination="4Ft-3T-Rpw" id="239-6R-ufw"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ceo-TN-YGM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -691,6 +713,7 @@
     </scenes>
     <resources>
         <image name="253-person" width="26" height="24"/>
+        <image name="275-broadcast" width="26" height="24"/>
         <image name="30-circle-play" width="28" height="28"/>
         <image name="Ju" width="30" height="30"/>
         <image name="Qi" width="30" height="30"/>
@@ -703,6 +726,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="oqp-cw-4cQ"/>
+        <segue reference="DfF-mJ-j05"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -24,14 +24,22 @@
     [refControl addTarget:self action:@selector(refresh:) forControlEvents:UIControlEventValueChanged];
     self.refreshControl = refControl;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+}
 
-    NyaruDB *db = [NyaruDB instance];
-    NyaruCollection *col = [db collection:@"shows"];
-    if ([[col where:@"type" equal:@"zao"] count] == 0) {
-        [self refresh:self.refreshControl];
-    }
-    else {
-        [self loadDatabase];
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    NSString *username = [[NSUserDefaults standardUserDefaults] stringForKey:@"username"];
+    NSString *token = [[NSUserDefaults standardUserDefaults] stringForKey:@"token"];
+    if (username && token) {
+        NyaruDB *db = [NyaruDB instance];
+        NyaruCollection *col = [db collection:@"shows"];
+        if ([[col where:@"type" equal:@"zao"] count] == 0) {
+            [self refresh:self.refreshControl];
+        }
+        else {
+            [self loadDatabase];
+        }
     }
 }
 
@@ -41,7 +49,7 @@
         [SVProgressHUD show];
         [SVProgressHUD setStatus:@"载入中..."];
         AFHTTPRequestOperationManager *man = [AFHTTPRequestOperationManager manager];
-        NSString *reqAddr = [NSString stringWithFormat:@"%@/shows/", LAMSERVER];
+        NSString *reqAddr = [NSString stringWithFormat:@"%@/shows", LAMSERVER];
         [man GET:reqAddr parameters:@{@"type": @"zao"} success:^(AFHTTPRequestOperation *operation, id responseObject) {
             NyaruDB *db = [NyaruDB instance];
             NyaruCollection *col = [db collection:@"shows"];

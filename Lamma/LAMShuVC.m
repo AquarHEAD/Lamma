@@ -42,7 +42,7 @@
         [SVProgressHUD show];
         [SVProgressHUD setStatus:@"载入中..."];
         AFHTTPRequestOperationManager *man = [AFHTTPRequestOperationManager manager];
-        NSString *reqAddr = [NSString stringWithFormat:@"%@/shows/", LAMSERVER];
+        NSString *reqAddr = [NSString stringWithFormat:@"%@/shows", LAMSERVER];
         [man GET:reqAddr parameters:@{@"type": @"shu"} success:^(AFHTTPRequestOperation *operation, id responseObject) {
             NyaruDB *db = [NyaruDB instance];
             NyaruCollection *col = [db collection:@"shows"];
