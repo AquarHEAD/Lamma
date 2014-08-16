@@ -7,12 +7,15 @@
 //
 
 #import "LAMAppDelegate.h"
+#import <SVProgressHUD.h>
 
 @implementation LAMAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [SVProgressHUD setBackgroundColor:[UIColor lightGrayColor]];
+    [SVProgressHUD setForegroundColor:[UIColor whiteColor]];
     return YES;
 }
 							

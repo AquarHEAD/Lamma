@@ -27,17 +27,17 @@ PODS:
     - OBSlider (~> 1.1)
   - HysteriaPlayer (2.0.0)
   - IPSqueezableViewController (0.0.1)
-  - JGProgressHUD (1.0.2)
   - OBSlider (1.1.0)
   - StaticDataTableViewController (2.0.3)
+  - SVProgressHUD (HEAD based on 1.0)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
   - BeamMusicPlayerViewController
   - HysteriaPlayer (~> 2.0.0)
   - IPSqueezableViewController
-  - JGProgressHUD (= 1.0.2)
   - StaticDataTableViewController (from `git@github.com:xelvenone/StaticDataTableViewController.git`)
+  - SVProgressHUD (HEAD)
 
 EXTERNAL SOURCES:
   StaticDataTableViewController:
@@ -48,8 +48,8 @@ SPEC CHECKSUMS:
   BeamMusicPlayerViewController: acbfa705ca2847bce13520b185bf3f36f5ff8399
   HysteriaPlayer: a0a7a5964089787acb84a9cfd53c0be34687d390
   IPSqueezableViewController: e3d263372f1442c8fb594388014c4107edcf7b86
-  JGProgressHUD: 97fc8c04c72eff2eb8d13bf7ff79e2cace617c9f
   OBSlider: 3536461f3dd47dfcbd0972c5aafb88aa7081fb79
   StaticDataTableViewController: 5c46c12bd116e7a8bab4e3b6de5255ae4fa97e5b
+  SVProgressHUD: 5034c6e22b8c2ca3e09402e48d41ed0340aa1c50
 
 COCOAPODS: 0.33.1

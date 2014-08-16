@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="14A314h" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="b67-Em-Fcs">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="b67-Em-Fcs">
     <dependencies>
         <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
@@ -20,7 +20,7 @@
                         <segue destination="iBZ-FG-pDc" kind="relationship" relationship="viewControllers" id="Ptq-Ox-eHq"/>
                         <segue destination="jv1-jy-7S1" kind="relationship" relationship="viewControllers" id="6uR-IQ-An4"/>
                         <segue destination="9lj-dh-TfM" kind="relationship" relationship="viewControllers" id="KbB-hU-Jrl"/>
-                        <segue destination="9c2-NN-beR" kind="modal" id="UTr-iw-aje"/>
+                        <segue destination="9c2-NN-beR" kind="modal" identifier="openSignup" id="UTr-iw-aje"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="26G-rf-0eh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -62,11 +62,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="枣子讯" id="Of1-SG-NFv">
-                        <barButtonItem key="leftBarButtonItem" image="253-person" id="hyA-Mh-Fup"/>
+                        <barButtonItem key="rightBarButtonItem" image="253-person" id="hyA-Mh-Fup"/>
                     </navigationItem>
                     <connections>
                         <segue destination="GdN-sl-4Dg" kind="push" identifier="toPlayer" id="oqp-cw-4cQ"/>
-                        <segue destination="Y5Z-dy-i8F" kind="push" id="ruc-9B-h51"/>
+                        <segue destination="Y5Z-dy-i8F" kind="push" identifier="toUser" id="ruc-9B-h51"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JdK-P8-L83" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -82,7 +82,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Xtr-FU-vGn" style="IBUITableViewCellStyleDefault" id="Tcj-dV-gj9">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="Xtr-FU-vGn" style="IBUITableViewCellStyleDefault" id="Tcj-dV-gj9">
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Tcj-dV-gj9" id="8tx-DV-AGZ">
@@ -107,11 +107,11 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="枣子讯" id="0UB-p6-kGw">
-                        <barButtonItem key="leftBarButtonItem" image="253-person" id="AHo-vj-K3J"/>
+                        <barButtonItem key="rightBarButtonItem" image="253-person" id="AHo-vj-K3J"/>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <segue destination="5bz-9z-tR8" kind="push" id="qc3-vc-9O9"/>
+                        <segue destination="5bz-9z-tR8" kind="push" identifier="toHostZao" id="qc3-vc-9O9"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rJD-Ds-Cgf" userLabel="First Responder" sceneMemberID="firstResponder"/>

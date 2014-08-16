@@ -11,7 +11,7 @@
 #import "LAMPlayerVC.h"
 
 #import <AFNetworking.h>
-#import <JGProgressHUD.h>
+#import <SVProgressHUD.h>
 
 @interface LAMZaoVC ()
 
@@ -25,26 +25,33 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    JGProgressHUD *HUD = [JGProgressHUD progressHUDWithStyle:JGProgressHUDStyleDark];
-    HUD.textLabel.text = @"载入中...";
-    [HUD showInView:self.view];
+    UIRefreshControl *refControl = [UIRefreshControl new];
+    [refControl addTarget:self action:@selector(refresh:) forControlEvents:UIControlEventValueChanged];
+    self.refreshControl = refControl;
+}
 
-    AFHTTPRequestOperationManager *man = [AFHTTPRequestOperationManager manager];
-    NSString *reqAddr = [NSString stringWithFormat:@"%@/%@/", LAMSERVER, @"zao"];
-    [man GET:reqAddr parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSMutableArray *temp = [NSMutableArray new];
-        for (NSDictionary *dict in responseObject) {
-            [temp addObject:[LAMShow initFromDictionary:dict]];
-        }
-        self.shows = [temp copy];
-        [self.tableView reloadData];
-        HUD.textLabel.text = @"载入完成...";
-        [HUD dismissAfterDelay:0.8];
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"Error: %@", error);
-        HUD.textLabel.text = @"载入错误, 请重试";
-        [HUD dismissAfterDelay:2];
-    }];
+- (void)refresh:(id)sender
+{
+    if ([sender isEqual:self.refreshControl]) {
+        /*
+         [SVProgressHUD show];
+         [SVProgressHUD setStatus:@"载入中..."];
+         AFHTTPRequestOperationManager *man = [AFHTTPRequestOperationManager manager];
+         NSString *reqAddr = [NSString stringWithFormat:@"%@/%@/", LAMSERVER, @"zao"];
+         [man GET:reqAddr parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+         NSMutableArray *temp = [NSMutableArray new];
+         for (NSDictionary *dict in responseObject) {
+         [temp addObject:[LAMShow initFromDictionary:dict]];
+         }
+         self.shows = [temp copy];
+         [self.tableView reloadData];
+         [SVProgressHUD showSuccessWithStatus:@"载入完成!"];
+         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+         NSLog(@"Error: %@", error);
+         [SVProgressHUD showErrorWithStatus:@"载入错误, 请重试"];
+         }];
+         */
+    }
 }
 
 #pragma mark - Table view data source
@@ -56,22 +63,23 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.shows.count;
+    return 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
 
-    LAMShow *show = [self.shows objectAtIndex:indexPath.row];
-    if (indexPath.row % 2 == 1) {
-        cell.backgroundColor = [UIColor colorWithRed:145.0/255.0 green:152.0/255.0 blue:159.0/255.0 alpha:0.05];
-    }
-    else {
-        cell.backgroundColor = [UIColor whiteColor];
-    }
-    cell.textLabel.text = show.title;
-    
+//    LAMShow *show = [self.shows objectAtIndex:indexPath.row];
+//    if (indexPath.row % 2 == 1) {
+//        cell.backgroundColor = [UIColor colorWithRed:145.0/255.0 green:152.0/255.0 blue:159.0/255.0 alpha:0.05];
+//    }
+//    else {
+//        cell.backgroundColor = [UIColor whiteColor];
+//    }
+//    cell.textLabel.text = show.title;
+    cell.textLabel.text = @"哈哈";
+
     return cell;
 }
 
@@ -84,8 +92,8 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    LAMPlayerVC *vc = [segue destinationViewController];
-    vc.show = self.shows[self.selectedIndex];
+//    LAMPlayerVC *vc = [segue destinationViewController];
+//    vc.show = self.shows[self.selectedIndex];
 }
 
 @end
