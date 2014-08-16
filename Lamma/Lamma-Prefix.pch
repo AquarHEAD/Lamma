@@ -15,4 +15,4 @@
     #import <Foundation/Foundation.h>
 #endif
 
-#define LAMSERVER @"http://127.0.0.1:9393"
+#define LAMSERVER @"http://192.168.0.100:9393"

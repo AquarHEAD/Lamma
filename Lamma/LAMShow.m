@@ -18,6 +18,7 @@
     show.detail = dict[@"detail"];
     show.audio = dict[@"audio"];
     show.date = dict[@"date"];
+    show.status = LAMSHOWSTAT_TODOWNLOAD;
     return show;
 }
 

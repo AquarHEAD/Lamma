@@ -38,6 +38,7 @@
         }
         self.shows = [temp copy];
         [self.tableView reloadData];
+        HUD.textLabel.text = @"载入完成...";
         [HUD dismissAfterDelay:0.8];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);
@@ -63,6 +64,12 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
 
     LAMShow *show = [self.shows objectAtIndex:indexPath.row];
+    if (indexPath.row % 2 == 1) {
+        cell.backgroundColor = [UIColor colorWithRed:145.0/255.0 green:152.0/255.0 blue:159.0/255.0 alpha:0.05];
+    }
+    else {
+        cell.backgroundColor = [UIColor whiteColor];
+    }
     cell.textLabel.text = show.title;
     
     return cell;

@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+#define LAMSHOWSTAT_TODOWNLOAD 0
+#define LAMSHOWSTAT_DOWNLOADING 1
+#define LAMSHOWSTAT_DOWNLOADED 2
+
 @interface LAMShow : NSObject
 
 @property (nonatomic, strong) NSString *type;
@@ -15,6 +19,7 @@
 @property (nonatomic, strong) NSString *detail;
 @property (nonatomic, strong) NSString *audio;
 @property (nonatomic, strong) NSDate *date;
+@property (nonatomic) NSUInteger status;
 
 + (instancetype)initFromDictionary:(NSDictionary *)dict;
 

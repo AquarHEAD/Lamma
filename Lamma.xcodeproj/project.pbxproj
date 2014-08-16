@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F8A14E7199B8E00009F47B7 /* LAMUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F8A14E6199B8E00009F47B7 /* LAMUser.m */; };
+		4F8A14E9199EEC05009F47B7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F8A14E8199EEC05009F47B7 /* Images.xcassets */; };
+		4F8A14EC199EF5D5009F47B7 /* LAMHostListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F8A14EB199EF5D5009F47B7 /* LAMHostListVC.m */; };
 		4F948FC3199283CD00265DF0 /* LAMShow.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F948FC2199283CD00265DF0 /* LAMShow.m */; };
 		4F948FC6199283F500265DF0 /* LAMPlayerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F948FC5199283F500265DF0 /* LAMPlayerVC.m */; };
 		4FB7D0431993BE00006DB7C8 /* LAMZaoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB7D0421993BE00006DB7C8 /* LAMZaoVC.m */; };
@@ -18,7 +21,6 @@
 		4FD868371967B2AD006A1994 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FD868361967B2AD006A1994 /* main.m */; };
 		4FD8683B1967B2AD006A1994 /* LAMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FD8683A1967B2AD006A1994 /* LAMAppDelegate.m */; };
 		4FD8683E1967B2AD006A1994 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FD8683C1967B2AD006A1994 /* Main.storyboard */; };
-		4FD868431967B2AD006A1994 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FD868421967B2AD006A1994 /* Images.xcassets */; };
 		4FD8684A1967B2AD006A1994 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FD868491967B2AD006A1994 /* XCTest.framework */; };
 		4FD8684B1967B2AD006A1994 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FD8682A1967B2AD006A1994 /* Foundation.framework */; };
 		4FD8684C1967B2AD006A1994 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FD8682E1967B2AD006A1994 /* UIKit.framework */; };
@@ -38,6 +40,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4F8A14E5199B8E00009F47B7 /* LAMUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAMUser.h; sourceTree = "<group>"; };
+		4F8A14E6199B8E00009F47B7 /* LAMUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LAMUser.m; sourceTree = "<group>"; };
+		4F8A14E8199EEC05009F47B7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		4F8A14EA199EF5D5009F47B7 /* LAMHostListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAMHostListVC.h; sourceTree = "<group>"; };
+		4F8A14EB199EF5D5009F47B7 /* LAMHostListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LAMHostListVC.m; sourceTree = "<group>"; };
 		4F948FC1199283CD00265DF0 /* LAMShow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAMShow.h; sourceTree = "<group>"; };
 		4F948FC2199283CD00265DF0 /* LAMShow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LAMShow.m; sourceTree = "<group>"; };
 		4F948FC4199283F500265DF0 /* LAMPlayerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAMPlayerVC.h; sourceTree = "<group>"; };
@@ -56,7 +63,6 @@
 		4FD868391967B2AD006A1994 /* LAMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LAMAppDelegate.h; sourceTree = "<group>"; };
 		4FD8683A1967B2AD006A1994 /* LAMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LAMAppDelegate.m; sourceTree = "<group>"; };
 		4FD8683D1967B2AD006A1994 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		4FD868421967B2AD006A1994 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4FD868481967B2AD006A1994 /* LammaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LammaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FD868491967B2AD006A1994 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		4FD868511967B2AD006A1994 /* LammaTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LammaTests-Info.plist"; sourceTree = "<group>"; };
@@ -97,6 +103,8 @@
 			children = (
 				4F948FC1199283CD00265DF0 /* LAMShow.h */,
 				4F948FC2199283CD00265DF0 /* LAMShow.m */,
+				4F8A14E5199B8E00009F47B7 /* LAMUser.h */,
+				4F8A14E6199B8E00009F47B7 /* LAMUser.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -106,6 +114,8 @@
 			children = (
 				4FB7D0411993BE00006DB7C8 /* LAMZaoVC.h */,
 				4FB7D0421993BE00006DB7C8 /* LAMZaoVC.m */,
+				4F8A14EA199EF5D5009F47B7 /* LAMHostListVC.h */,
+				4F8A14EB199EF5D5009F47B7 /* LAMHostListVC.m */,
 			);
 			name = Tabs;
 			sourceTree = "<group>";
@@ -159,7 +169,7 @@
 				4FB7D0451994329C006DB7C8 /* Player */,
 				4FB7D04419943297006DB7C8 /* Tabs */,
 				4FD8683C1967B2AD006A1994 /* Main.storyboard */,
-				4FD868421967B2AD006A1994 /* Images.xcassets */,
+				4F8A14E8199EEC05009F47B7 /* Images.xcassets */,
 				4FD868311967B2AD006A1994 /* Supporting Files */,
 			);
 			path = Lamma;
@@ -283,7 +293,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4FD868431967B2AD006A1994 /* Images.xcassets in Resources */,
+				4F8A14E9199EEC05009F47B7 /* Images.xcassets in Resources */,
 				4FD868351967B2AD006A1994 /* InfoPlist.strings in Resources */,
 				4FD8683E1967B2AD006A1994 /* Main.storyboard in Resources */,
 			);
@@ -337,7 +347,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F8A14EC199EF5D5009F47B7 /* LAMHostListVC.m in Sources */,
 				4FB7D0431993BE00006DB7C8 /* LAMZaoVC.m in Sources */,
+				4F8A14E7199B8E00009F47B7 /* LAMUser.m in Sources */,
 				4FD868371967B2AD006A1994 /* main.m in Sources */,
 				4F948FC6199283F500265DF0 /* LAMPlayerVC.m in Sources */,
 				4FD8683B1967B2AD006A1994 /* LAMAppDelegate.m in Sources */,
