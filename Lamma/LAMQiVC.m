@@ -8,12 +8,11 @@
 
 #import "LAMQiVC.h"
 #import "LAMShow.h"
-#import "LAMPlayerVC.h"
+#import "LAMPlayingShow.h"
 
 @interface LAMQiVC ()
 
 @property (nonatomic, strong) NSArray *shows;
-@property (nonatomic) NSUInteger selectedIndex;
 
 @end
 
@@ -105,14 +104,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    self.selectedIndex = indexPath.row;
-    [self performSegueWithIdentifier:@"toPlayer" sender:self];
-}
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    //    LAMPlayerVC *vc = [segue destinationViewController];
-    //    vc.show = self.shows[self.selectedIndex];
+    [LAMPlayingShow sharedInstance].playingShow = self.shows[indexPath.row];
+    self.tabBarController.selectedIndex = 2;
 }
 
 @end

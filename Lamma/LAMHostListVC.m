@@ -8,10 +8,12 @@
 
 #import "LAMHostListVC.h"
 #import "LAMShow.h"
+#import "LAMZaoVC.h"
 
 @interface LAMHostListVC ()
 
 @property (nonatomic, strong) NSArray *shows;
+@property (nonatomic, strong) NSString *selectedHost;
 
 @end
 
@@ -121,18 +123,19 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    LAMShow *selectedShow = self.shows[indexPath.row];
+    self.selectedHost = selectedShow.host;
     [self performSegueWithIdentifier:@"toHostZao" sender:self];
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"toHostZao"]) {
+        LAMZaoVC *vc = segue.destinationViewController;
+        vc.host = self.selectedHost;
+    }
 }
-*/
+
 
 @end

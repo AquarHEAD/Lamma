@@ -76,9 +76,6 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <segue destination="GdN-sl-4Dg" kind="push" identifier="toPlayer" id="oqp-cw-4cQ"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JdK-P8-L83" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -776,8 +773,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="oqp-cw-4cQ"/>
-        <segue reference="m3U-0q-VSN"/>
+        <segue reference="gs9-cd-cdr"/>
         <segue reference="7Bw-tS-5x7"/>
     </inferredMetricsTieBreakers>
 </document>

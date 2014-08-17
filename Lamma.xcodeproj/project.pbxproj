@@ -18,6 +18,7 @@
 		4F948FC3199283CD00265DF0 /* LAMShow.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F948FC2199283CD00265DF0 /* LAMShow.m */; };
 		4F948FC6199283F500265DF0 /* LAMPlayerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F948FC5199283F500265DF0 /* LAMPlayerVC.m */; };
 		4F9E9B3D19A02F6E005C4DE9 /* LAMUserVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F9E9B3C19A02F6E005C4DE9 /* LAMUserVC.m */; };
+		4F9E9B4119A03443005C4DE9 /* LAMPlayingShow.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F9E9B4019A03443005C4DE9 /* LAMPlayingShow.m */; };
 		4FB7D0431993BE00006DB7C8 /* LAMZaoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB7D0421993BE00006DB7C8 /* LAMZaoVC.m */; };
 		4FB7D04719943B51006DB7C8 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FB7D04619943B51006DB7C8 /* AVFoundation.framework */; };
 		4FD8682B1967B2AD006A1994 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FD8682A1967B2AD006A1994 /* Foundation.framework */; };
@@ -67,6 +68,8 @@
 		4F948FC5199283F500265DF0 /* LAMPlayerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LAMPlayerVC.m; sourceTree = "<group>"; };
 		4F9E9B3B19A02F6E005C4DE9 /* LAMUserVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAMUserVC.h; sourceTree = "<group>"; };
 		4F9E9B3C19A02F6E005C4DE9 /* LAMUserVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LAMUserVC.m; sourceTree = "<group>"; };
+		4F9E9B3F19A03443005C4DE9 /* LAMPlayingShow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAMPlayingShow.h; sourceTree = "<group>"; };
+		4F9E9B4019A03443005C4DE9 /* LAMPlayingShow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LAMPlayingShow.m; sourceTree = "<group>"; };
 		4FB7D0411993BE00006DB7C8 /* LAMZaoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAMZaoVC.h; sourceTree = "<group>"; };
 		4FB7D0421993BE00006DB7C8 /* LAMZaoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LAMZaoVC.m; sourceTree = "<group>"; };
 		4FB7D04619943B51006DB7C8 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -201,6 +204,8 @@
 			children = (
 				4F948FC4199283F500265DF0 /* LAMPlayerVC.h */,
 				4F948FC5199283F500265DF0 /* LAMPlayerVC.m */,
+				4F9E9B3F19A03443005C4DE9 /* LAMPlayingShow.h */,
+				4F9E9B4019A03443005C4DE9 /* LAMPlayingShow.m */,
 			);
 			name = Player;
 			sourceTree = "<group>";
@@ -429,6 +434,7 @@
 				4F8F4790199F322F004EB27A /* LAMSignupVC.m in Sources */,
 				4FB7D0431993BE00006DB7C8 /* LAMZaoVC.m in Sources */,
 				4F8A14E7199B8E00009F47B7 /* LAMUser.m in Sources */,
+				4F9E9B4119A03443005C4DE9 /* LAMPlayingShow.m in Sources */,
 				4FD868371967B2AD006A1994 /* main.m in Sources */,
 				4F948FC6199283F500265DF0 /* LAMPlayerVC.m in Sources */,
 				4FD8683B1967B2AD006A1994 /* LAMAppDelegate.m in Sources */,

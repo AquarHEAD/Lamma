@@ -10,4 +10,6 @@
 
 @interface LAMZaoVC : UITableViewController
 
+@property (nonatomic, strong) NSString *host;
+
 @end
