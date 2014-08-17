@@ -48,6 +48,9 @@
             NSUInteger minutes = floor(currentSeconds / 60);
             NSUInteger seconds = floor(currentSeconds % 60);
             weakSelf.currentTimeLabel.text = [NSString stringWithFormat:@"%lu:%02lu", (unsigned long)minutes, (unsigned long)seconds];
+
+            NSUInteger totalSecond = CMTimeGetSeconds(weakSelf.player.currentItem.duration);
+            weakSelf.playProgress.progress = (double)currentSeconds / totalSecond;
         }
     }];
 
