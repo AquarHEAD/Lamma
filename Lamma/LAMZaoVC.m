@@ -106,6 +106,7 @@
     LAMShowCell *thisCell = (LAMShowCell *)manButton.superview.superview;
     NSIndexPath *idx = [self.tableView indexPathForCell:thisCell];
     LAMShow *thisShow = self.shows[idx.row];
+    NSLog(@"localFile: %@", thisShow.localFile);
     if (manButton.selected) {
         [[NSFileManager defaultManager] removeItemAtPath:[thisShow.localFile absoluteString] error:nil];
         thisShow.status = LAMSHOWSTAT_TODOWNLOAD;
