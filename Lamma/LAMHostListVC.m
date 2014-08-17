@@ -98,7 +98,7 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         hostImage = @{@"zhang": @"253-person",
-                      @"li": @"71-compass"};
+                      @"li": @"221-recordplayer"};
     });
 
     LAMShow *thisShow = self.shows[indexPath.row];
