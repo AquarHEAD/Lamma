@@ -70,11 +70,14 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="枣子讯" id="Of1-SG-NFv">
-                        <barButtonItem key="rightBarButtonItem" image="253-person" id="hyA-Mh-Fup"/>
+                        <barButtonItem key="rightBarButtonItem" image="253-person" id="hyA-Mh-Fup">
+                            <connections>
+                                <segue destination="Y5Z-dy-i8F" kind="push" id="gs9-cd-cdr"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <segue destination="GdN-sl-4Dg" kind="push" identifier="toPlayer" id="oqp-cw-4cQ"/>
-                        <segue destination="Y5Z-dy-i8F" kind="modal" identifier="toUser" id="ruc-9B-h51"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JdK-P8-L83" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -122,7 +125,11 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="枣子讯" id="0UB-p6-kGw">
-                        <barButtonItem key="rightBarButtonItem" image="253-person" id="AHo-vj-K3J"/>
+                        <barButtonItem key="rightBarButtonItem" image="253-person" id="AHo-vj-K3J">
+                            <connections>
+                                <segue destination="Y5Z-dy-i8F" kind="push" id="ChU-CB-wWP"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -244,7 +251,11 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="牛角挂书" id="hLf-Fk-Ma6">
-                        <barButtonItem key="rightBarButtonItem" image="253-person" id="h72-1I-Sy4"/>
+                        <barButtonItem key="rightBarButtonItem" image="253-person" id="h72-1I-Sy4">
+                            <connections>
+                                <segue destination="Y5Z-dy-i8F" kind="push" id="nJD-4J-P03"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
@@ -474,6 +485,7 @@
         <scene sceneID="asW-jR-fvR">
             <objects>
                 <navigationController definesPresentationContext="YES" id="9c2-NN-beR" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="UFc-9H-5Gg"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="fTY-m8-bgA">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -542,7 +554,11 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="仓箱可期" id="bGC-h0-6wS">
-                        <barButtonItem key="rightBarButtonItem" image="253-person" id="JQw-Tb-wmI"/>
+                        <barButtonItem key="rightBarButtonItem" image="253-person" id="JQw-Tb-wmI">
+                            <connections>
+                                <segue destination="Y5Z-dy-i8F" kind="push" id="eHw-4K-1Ih"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
@@ -550,10 +566,10 @@
             </objects>
             <point key="canvasLocation" x="1213" y="666"/>
         </scene>
-        <!--Table View Controller-->
+        <!--UserVC-->
         <scene sceneID="9ze-l2-2Ev">
             <objects>
-                <tableViewController id="Y5Z-dy-i8F" sceneMemberID="viewController">
+                <tableViewController id="Y5Z-dy-i8F" customClass="LAMUserVC" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="2IY-9i-jNV">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -562,7 +578,7 @@
                             <tableViewSection headerTitle="欢迎" id="ZNX-aG-E2X">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="aYD-NB-FxQ" style="IBUITableViewCellStyleDefault" id="mKU-wr-2GY">
-                                        <rect key="frame" x="0.0" y="55" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="119" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mKU-wr-2GY" id="pJX-Km-fKA">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -582,20 +598,46 @@
                             </tableViewSection>
                             <tableViewSection id="iRa-94-zVf">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="5bb-oM-t7E" style="IBUITableViewCellStyleDefault" id="kXl-Cj-9JO">
-                                        <rect key="frame" x="0.0" y="119" width="320" height="44"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="5bb-oM-t7E" style="IBUITableViewCellStyleDefault" id="kXl-Cj-9JO">
+                                        <rect key="frame" x="0.0" y="183" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kXl-Cj-9JO" id="q76-gh-7Ry">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="我的收藏" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5bb-oM-t7E">
-                                                    <rect key="frame" x="15" y="0.0" width="290" height="43"/>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="精彩推荐" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5bb-oM-t7E">
+                                                    <rect key="frame" x="15" y="0.0" width="270" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection id="9Wv-4N-MYC">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="ZcA-8I-VkR">
+                                        <rect key="frame" x="0.0" y="247" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZcA-8I-VkR" id="3p4-Fj-Zr7">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hOF-2W-vvA">
+                                                    <rect key="frame" x="0.0" y="7" width="320" height="33"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <state key="normal" title="注销">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="logout:" destination="Y5Z-dy-i8F" eventType="touchUpInside" id="saN-MJ-tX2"/>
+                                                        <action selector="submit:" destination="iyr-VL-XuS" eventType="touchUpInside" id="PUx-Tu-rVI"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -608,6 +650,10 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="LOH-af-F4T"/>
+                    <connections>
+                        <outlet property="usernameCell" destination="mKU-wr-2GY" id="ZxK-TK-brH"/>
+                        <segue destination="9c2-NN-beR" kind="modal" identifier="openLogin" id="7Bw-tS-5x7"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C6Q-cV-t1C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -670,7 +716,11 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="奇货可居" id="lw0-mx-4xH">
-                        <barButtonItem key="rightBarButtonItem" image="253-person" id="yxd-06-Kwl"/>
+                        <barButtonItem key="rightBarButtonItem" image="253-person" id="yxd-06-Kwl">
+                            <connections>
+                                <segue destination="Y5Z-dy-i8F" kind="push" id="m3U-0q-VSN"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
@@ -726,6 +776,8 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="DfF-mJ-j05"/>
+        <segue reference="oqp-cw-4cQ"/>
+        <segue reference="m3U-0q-VSN"/>
+        <segue reference="7Bw-tS-5x7"/>
     </inferredMetricsTieBreakers>
 </document>
