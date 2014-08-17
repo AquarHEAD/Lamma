@@ -54,7 +54,7 @@
     self.detailView.backgroundColor = [UIColor clearColor];
     [self.detailView loadHTMLString:self.show.detail baseURL:nil];
     // setup button
-    [self.controlButton setImage:[UIImage imageNamed:@"29-circle-pause"] forState:UIControlStateSelected];
+    [self.controlButton setImage:[UIImage imageNamed:@"Pause"] forState:UIControlStateSelected];
 }
 
 - (IBAction)handleControlBtn:(id)sender {
