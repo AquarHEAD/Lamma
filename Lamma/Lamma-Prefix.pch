@@ -18,4 +18,4 @@
     #import <AFNetworking.h>
 #endif
 
-#define LAMSERVER @"http://127.0.0.1:9393"
+#define LAMSERVER @"http://lamma.teawhen.com"
