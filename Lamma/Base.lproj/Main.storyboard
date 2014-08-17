@@ -583,6 +583,9 @@
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <state key="selected" image="218-trash2"/>
+                                            <connections>
+                                                <action selector="showManage:" destination="nhy-Lk-bun" eventType="touchUpInside" id="Lwt-Bf-rrq"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                 </tableViewCellContentView>
@@ -758,6 +761,9 @@
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <state key="selected" image="218-trash2"/>
+                                            <connections>
+                                                <action selector="showManage:" destination="j4v-YR-tWI" eventType="touchUpInside" id="vqu-YE-UIJ"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                 </tableViewCellContentView>
@@ -838,7 +844,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="nJD-4J-P03"/>
+        <segue reference="m3U-0q-VSN"/>
         <segue reference="7Bw-tS-5x7"/>
     </inferredMetricsTieBreakers>
 </document>

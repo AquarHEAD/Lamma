@@ -106,7 +106,6 @@
     LAMShowCell *thisCell = (LAMShowCell *)manButton.superview.superview;
     NSIndexPath *idx = [self.tableView indexPathForCell:thisCell];
     LAMShow *thisShow = self.shows[idx.row];
-    NSLog(@"localFile: %@", thisShow.localFile);
     if (manButton.selected) {
         [[NSFileManager defaultManager] removeItemAtPath:[thisShow.localFile absoluteString] error:nil];
         thisShow.status = LAMSHOWSTAT_TODOWNLOAD;
@@ -117,7 +116,6 @@
         AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
         NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:thisShow.audio]];
         NSURLSessionDownloadTask *downloadTask = [manager downloadTaskWithRequest:request progress:nil destination:^NSURL *(NSURL *targetPath, NSURLResponse *response) {
-            NSLog(@"localFile: %@", thisShow.localFile);
             return thisShow.localFile;
         } completionHandler:^(NSURLResponse *response, NSURL *filePath, NSError *error) {
             thisShow.status = LAMSHOWSTAT_DOWNLOADED;
