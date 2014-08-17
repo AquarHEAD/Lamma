@@ -23,6 +23,7 @@
 @property (nonatomic, strong) NSDate *date;
 @property (nonatomic, strong) NSString *host;
 @property (nonatomic) NSUInteger status;
+@property (nonatomic, strong) NSURL *localFile;
 
 + (instancetype)initFromDictionary:(NSDictionary *)dict;
 

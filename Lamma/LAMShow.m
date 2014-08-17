@@ -21,7 +21,14 @@
     show.audio = dict[@"audio"];
     show.date = dict[@"date"];
     show.host = dict[@"host"];
-    show.status = LAMSHOWSTAT_TODOWNLOAD;
+    NSURL *documentsDirectoryURL = [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:NO error:nil];
+    show.localFile = [documentsDirectoryURL URLByAppendingPathComponent:[[NSURL URLWithString:show.audio] lastPathComponent]];
+    if ([[NSFileManager defaultManager] fileExistsAtPath:[show.localFile absoluteString]]) {
+        show.status = LAMSHOWSTAT_DOWNLOADED;
+    }
+    else {
+        show.status = LAMSHOWSTAT_TODOWNLOAD;
+    }
     return show;
 }
 

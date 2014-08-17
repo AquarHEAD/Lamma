@@ -9,6 +9,7 @@
 #import "LAMJuVC.h"
 #import "LAMShow.h"
 #import "LAMPlayingShow.h"
+#import "LAMShowCell.h"
 
 @interface LAMJuVC ()
 
@@ -87,16 +88,21 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     LAMShow *thisShow = self.shows[indexPath.row];
-
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    LAMShowCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ShowCell" forIndexPath:indexPath];
     if (indexPath.row % 2 == 1) {
         cell.backgroundColor = [UIColor colorWithRed:145.0/255.0 green:152.0/255.0 blue:159.0/255.0 alpha:0.05];
     }
     else {
         cell.backgroundColor = [UIColor whiteColor];
     }
-    cell.textLabel.text = thisShow.title;
-    cell.detailTextLabel.text = thisShow.subtitle;
+    cell.titleLabel.text = thisShow.title;
+    cell.subLabel.text = thisShow.subtitle;
+    if (thisShow.status == LAMSHOWSTAT_DOWNLOADED) {
+        cell.manageButton.selected = YES;
+    }
+    else {
+        cell.manageButton.selected = NO;
+    }
 
     return cell;
 }
