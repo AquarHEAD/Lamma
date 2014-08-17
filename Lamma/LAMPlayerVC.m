@@ -47,14 +47,9 @@
             NSUInteger currentSeconds = CMTimeGetSeconds([weakSelf.player currentTime]);
             NSUInteger minutes = floor(currentSeconds / 60);
             NSUInteger seconds = floor(currentSeconds % 60);
-            weakSelf.currentTimeLabel.text = [NSString stringWithFormat:@"%lu:%lu", (unsigned long)minutes, (unsigned long)seconds];
+            weakSelf.currentTimeLabel.text = [NSString stringWithFormat:@"%lu:%02lu", (unsigned long)minutes, (unsigned long)seconds];
         }
     }];
-
-    NSUInteger totalSecond = CMTimeGetSeconds(self.player.currentItem.duration);
-    NSUInteger minutes = floor(totalSecond / 60);
-    NSUInteger seconds = floor(totalSecond % 60);
-    self.totalTimeLabel.text = [NSString stringWithFormat:@"%lu:%lu", (unsigned long)minutes, (unsigned long)seconds];
 
     // setup detailView
     self.detailView.backgroundColor = [UIColor clearColor];
@@ -76,5 +71,12 @@
     self.isPlaying = !self.isPlaying;
 }
 
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+    NSUInteger totalSecond = CMTimeGetSeconds(self.player.currentItem.duration);
+    NSUInteger minutes = floor(totalSecond / 60);
+    NSUInteger seconds = floor(totalSecond % 60);
+    self.totalTimeLabel.text = [NSString stringWithFormat:@"%lu:%lu", (unsigned long)minutes, (unsigned long)seconds];
+}
 
 @end
