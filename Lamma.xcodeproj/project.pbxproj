@@ -345,7 +345,7 @@
 				ORGANIZATIONNAME = ElaWorkshop;
 				TargetAttributes = {
 					4FD868261967B2AD006A1994 = {
-						DevelopmentTeam = J43JVDE84T;
+						DevelopmentTeam = 7676B49VAW;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
