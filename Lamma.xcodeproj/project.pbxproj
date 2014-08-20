@@ -52,6 +52,7 @@
 		4F29B6F619A4EDFA00EC8BBC /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		4F29B6F819A5050000EC8BBC /* LAMOnboardVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAMOnboardVC.h; sourceTree = "<group>"; };
 		4F29B6F919A5050000EC8BBC /* LAMOnboardVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LAMOnboardVC.m; sourceTree = "<group>"; };
+		4F29B6FB19A50DCC00EC8BBC /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		4F8A14E8199EEC05009F47B7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4F8A14EA199EF5D5009F47B7 /* LAMHostListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAMHostListVC.h; sourceTree = "<group>"; };
 		4F8A14EB199EF5D5009F47B7 /* LAMHostListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LAMHostListVC.m; sourceTree = "<group>"; };
@@ -488,6 +489,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				4FD8683D1967B2AD006A1994 /* Base */,
+				4F29B6FB19A50DCC00EC8BBC /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

@@ -1,0 +1,123 @@
+
+/* Class = "IBUINavigationItem"; title = "枣子讯"; ObjectID = "0UB-p6-kGw"; */
+"0UB-p6-kGw.title" = "枣子讯";
+
+/* Class = "IBUILabel"; text = "Subtitle"; ObjectID = "14A-b9-bug"; */
+"14A-b9-bug.text" = "Subtitle";
+
+/* Class = "IBUIButton"; normalTitle = "获取验证码"; ObjectID = "2YN-Qk-FfH"; */
+"2YN-Qk-FfH.normalTitle" = "获取验证码";
+
+/* Class = "IBUITabBarItem"; title = "播放中"; ObjectID = "3Iu-By-48X"; */
+"3Iu-By-48X.title" = "播放中";
+
+/* Class = "IBUINavigationItem"; title = "选择您想听的节目"; ObjectID = "7eW-0c-wBa"; */
+"7eW-0c-wBa.title" = "选择您想听的节目";
+
+/* Class = "IBUILabel"; text = "性别"; ObjectID = "8Lv-kN-7J1"; */
+"8Lv-kN-7J1.text" = "性别";
+
+/* Class = "IBUILabel"; text = "Title"; ObjectID = "9QS-jl-2zN"; */
+"9QS-jl-2zN.text" = "Title";
+
+/* Class = "IBUILabel"; text = "手机"; ObjectID = "CbD-th-1k1"; */
+"CbD-th-1k1.text" = "手机";
+
+/* Class = "IBUITextField"; placeholder = "phone"; ObjectID = "EDh-vP-h7c"; */
+"EDh-vP-h7c.placeholder" = "phone";
+
+/* Class = "IBUILabel"; text = "_currentTime"; ObjectID = "HiA-fc-tCG"; */
+"HiA-fc-tCG.text" = "_currentTime";
+
+/* Class = "IBUITabBarItem"; title = "居"; ObjectID = "KHW-sa-Xdl"; */
+"KHW-sa-Xdl.title" = "居";
+
+/* Class = "IBUITextField"; placeholder = "password"; ObjectID = "LcX-3j-fEi"; */
+"LcX-3j-fEi.placeholder" = "password";
+
+/* Class = "IBUILabel"; text = "Title"; ObjectID = "NqF-z9-dLe"; */
+"NqF-z9-dLe.text" = "Title";
+
+/* Class = "IBUILabel"; text = "_totalTime"; ObjectID = "OPN-99-I53"; */
+"OPN-99-I53.text" = "_totalTime";
+
+/* Class = "IBUINavigationItem"; title = "枣子讯"; ObjectID = "Of1-SG-NFv"; */
+"Of1-SG-NFv.title" = "枣子讯";
+
+/* Class = "IBUITextField"; placeholder = "code"; ObjectID = "Rca-I2-56a"; */
+"Rca-I2-56a.placeholder" = "code";
+
+/* Class = "IBUITabBarItem"; title = "期"; ObjectID = "TJk-wD-INV"; */
+"TJk-wD-INV.title" = "期";
+
+/* Class = "IBUITextField"; placeholder = "username"; ObjectID = "TPG-lp-0JB"; */
+"TPG-lp-0JB.placeholder" = "username";
+
+/* Class = "IBUILabel"; text = "Title"; ObjectID = "Xtr-FU-vGn"; */
+"Xtr-FU-vGn.text" = "Title";
+
+/* Class = "IBUITableViewSection"; headerTitle = "欢迎"; ObjectID = "ZNX-aG-E2X"; */
+"ZNX-aG-E2X.headerTitle" = "欢迎";
+
+/* Class = "IBUILabel"; text = "验证码"; ObjectID = "aGw-y7-hzE"; */
+"aGw-y7-hzE.text" = "验证码";
+
+/* Class = "IBUILabel"; text = "_username"; ObjectID = "aYD-NB-FxQ"; */
+"aYD-NB-FxQ.text" = "_username";
+
+/* Class = "IBUINavigationItem"; title = "仓箱可期"; ObjectID = "bGC-h0-6wS"; */
+"bGC-h0-6wS.title" = "仓箱可期";
+
+/* Class = "IBUITabBarItem"; title = "枣"; ObjectID = "fCK-vQ-6f9"; */
+"fCK-vQ-6f9.title" = "枣";
+
+/* Class = "IBUILabel"; text = "Subtitle"; ObjectID = "fvi-1o-OYu"; */
+"fvi-1o-OYu.text" = "Subtitle";
+
+/* Class = "IBUISegmentedControl"; gJq-AR-gEB.segmentTitles[0] = "注册"; ObjectID = "gJq-AR-gEB"; */
+"gJq-AR-gEB.segmentTitles[0]" = "注册";
+
+/* Class = "IBUISegmentedControl"; gJq-AR-gEB.segmentTitles[1] = "登录"; ObjectID = "gJq-AR-gEB"; */
+"gJq-AR-gEB.segmentTitles[1]" = "登录";
+
+/* Class = "IBUINavigationItem"; title = "牛角挂书"; ObjectID = "hLf-Fk-Ma6"; */
+"hLf-Fk-Ma6.title" = "牛角挂书";
+
+/* Class = "IBUIButton"; normalTitle = "注销"; ObjectID = "hOF-2W-vvA"; */
+"hOF-2W-vvA.normalTitle" = "注销";
+
+/* Class = "IBUIButton"; normalTitle = "提交"; ObjectID = "haN-sY-uRd"; */
+"haN-sY-uRd.normalTitle" = "提交";
+
+/* Class = "IBUILabel"; text = "密码"; ObjectID = "ilt-fQ-ydw"; */
+"ilt-fQ-ydw.text" = "密码";
+
+/* Class = "IBUILabel"; text = "Title"; ObjectID = "kGs-52-APm"; */
+"kGs-52-APm.text" = "Title";
+
+/* Class = "IBUINavigationItem"; title = "奇货可居"; ObjectID = "lw0-mx-4xH"; */
+"lw0-mx-4xH.title" = "奇货可居";
+
+/* Class = "IBUILabel"; text = "Subtitle"; ObjectID = "oDf-Fq-4Kw"; */
+"oDf-Fq-4Kw.text" = "Subtitle";
+
+/* Class = "IBUILabel"; text = "用户名"; ObjectID = "ru9-tW-M0d"; */
+"ru9-tW-M0d.text" = "用户名";
+
+/* Class = "IBUILabel"; text = "Subtitle"; ObjectID = "vAs-dy-sf1"; */
+"vAs-dy-sf1.text" = "Subtitle";
+
+/* Class = "IBUILabel"; text = "Title"; ObjectID = "vGo-vt-DUC"; */
+"vGo-vt-DUC.text" = "Title";
+
+/* Class = "IBUISegmentedControl"; waM-yf-yOU.segmentTitles[0] = "男"; ObjectID = "waM-yf-yOU"; */
+"waM-yf-yOU.segmentTitles[0]" = "男";
+
+/* Class = "IBUISegmentedControl"; waM-yf-yOU.segmentTitles[1] = "女"; ObjectID = "waM-yf-yOU"; */
+"waM-yf-yOU.segmentTitles[1]" = "女";
+
+/* Class = "IBUITabBarItem"; title = "书"; ObjectID = "xQO-cM-ZR6"; */
+"xQO-cM-ZR6.title" = "书";
+
+/* Class = "IBUILabel"; text = "Subtitle"; ObjectID = "zXz-oq-J2F"; */
+"zXz-oq-J2F.text" = "Subtitle";

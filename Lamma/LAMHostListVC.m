@@ -99,8 +99,8 @@
     static NSDictionary *hostImage = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        hostImage = @{@"zhang": @"253-person",
-                      @"li": @"221-recordplayer"};
+        hostImage = @{@"zhang": @"Stamp-Zhang",
+                      @"li": @"Stamp-Li"};
     });
 
     LAMShow *thisShow = self.shows[indexPath.row];

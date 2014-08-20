@@ -35,6 +35,7 @@
         self.title = self.show.title;
 
         // setup player
+        [self.playerItem removeObserver:self forKeyPath:@"status"];
         if (self.show.status == LAMSHOWSTAT_DOWNLOADED) {
             self.playerItem = [AVPlayerItem playerItemWithURL:self.show.localFile];
         }
