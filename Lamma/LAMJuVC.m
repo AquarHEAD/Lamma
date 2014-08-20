@@ -98,39 +98,61 @@
     cell.titleLabel.text = thisShow.title;
     cell.subLabel.text = thisShow.subtitle;
     if (thisShow.status == LAMSHOWSTAT_DOWNLOADED) {
-        cell.manageButton.selected = YES;
+        // show delete
+        cell.downloadButton.hidden = YES;
+        cell.trashButton.hidden = NO;
     }
     else {
-        cell.manageButton.selected = NO;
+        cell.downloadButton.hidden = NO;
+        cell.trashButton.hidden = YES;
     }
+    cell.cancelButton.hidden = YES;
 
     return cell;
 }
 
-- (IBAction)showManage:(id)sender {
+- (IBAction)manButtonClicked:(id)sender {
     UIButton *manButton = (UIButton *)sender;
     LAMShowCell *thisCell = (LAMShowCell *)manButton.superview.superview;
     NSIndexPath *idx = [self.tableView indexPathForCell:thisCell];
     LAMShow *thisShow = self.shows[idx.row];
-    if (manButton.selected) {
-        [[NSFileManager defaultManager] removeItemAtPath:[thisShow.localFile absoluteString] error:nil];
-        thisShow.status = LAMSHOWSTAT_TODOWNLOAD;
-        [self.tableView reloadData];
-    }
-    else {
+    if ([manButton isEqual:thisCell.downloadButton]) {
         NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
         AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
         NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:thisShow.audio]];
-        NSURLSessionDownloadTask *downloadTask = [manager downloadTaskWithRequest:request progress:nil destination:^NSURL *(NSURL *targetPath, NSURLResponse *response) {
+        thisShow.downloadTask = [manager downloadTaskWithRequest:request progress:nil destination:^NSURL *(NSURL *targetPath, NSURLResponse *response) {
             return thisShow.localFile;
         } completionHandler:^(NSURLResponse *response, NSURL *filePath, NSError *error) {
-            thisShow.status = LAMSHOWSTAT_DOWNLOADED;
-            manButton.hidden = NO;
-            [self.tableView reloadData];
-            NSLog(@"File downloaded to: %@", filePath);
+            if (error) {
+                thisCell.downloadButton.hidden = NO;
+                thisCell.cancelButton.hidden = YES;
+                thisCell.trashButton.hidden = YES;
+            }
+            else {
+                thisShow.status = LAMSHOWSTAT_DOWNLOADED;
+                thisCell.downloadButton.hidden = YES;
+                thisCell.cancelButton.hidden = YES;
+                thisCell.trashButton.hidden = NO;
+                NSLog(@"File downloaded to: %@", filePath);
+            }
         }];
-        manButton.hidden = YES;
-        [downloadTask resume];
+        [thisShow.downloadTask resume];
+        thisCell.downloadButton.hidden = YES;
+        thisCell.cancelButton.hidden = NO;
+        thisCell.trashButton.hidden = YES;
+    }
+    else if ([manButton isEqual:thisCell.cancelButton]) {
+        [thisShow.downloadTask cancel];
+        thisCell.downloadButton.hidden = NO;
+        thisCell.cancelButton.hidden = YES;
+        thisCell.trashButton.hidden = YES;
+    }
+    else if ([manButton isEqual:thisCell.trashButton]){
+        [[NSFileManager defaultManager] removeItemAtPath:[thisShow.localFile absoluteString] error:nil];
+        thisShow.status = LAMSHOWSTAT_TODOWNLOAD;
+        thisCell.downloadButton.hidden = NO;
+        thisCell.cancelButton.hidden = YES;
+        thisCell.trashButton.hidden = YES;
     }
 }
 

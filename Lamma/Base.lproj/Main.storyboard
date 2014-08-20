@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="14A329f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="b67-Em-Fcs">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="b67-Em-Fcs">
     <dependencies>
         <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
@@ -110,22 +110,49 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NQc-rH-gyb">
-                                            <rect key="frame" x="264" y="21" width="37" height="22"/>
+                                            <rect key="frame" x="264" y="0.0" width="56" height="64"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" image="265-download">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <state key="selected" image="218-trash2"/>
+                                            <state key="highlighted" image="298-circlex"/>
                                             <connections>
-                                                <action selector="showManage:" destination="5bz-9z-tR8" eventType="touchUpInside" id="3Q5-26-ifl"/>
+                                                <action selector="manButtonClicked:" destination="5bz-9z-tR8" eventType="touchUpInside" id="bqn-DV-Emv"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0cu-0V-iX3">
+                                            <rect key="frame" x="264" y="0.0" width="56" height="64"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" image="298-circlex">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <state key="selected" image="218-trash2"/>
+                                            <state key="highlighted" image="298-circlex"/>
+                                            <connections>
+                                                <action selector="manButtonClicked:" destination="5bz-9z-tR8" eventType="touchUpInside" id="EGG-CE-i4B"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4tP-T9-z4e">
+                                            <rect key="frame" x="264" y="0.0" width="56" height="64"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" image="218-trash2">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <state key="selected" image="218-trash2"/>
+                                            <state key="highlighted" image="298-circlex"/>
+                                            <connections>
+                                                <action selector="manButtonClicked:" destination="5bz-9z-tR8" eventType="touchUpInside" id="11r-0w-jDZ"/>
                                             </connections>
                                         </button>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="manageButton" destination="NQc-rH-gyb" id="dbe-i7-I3P"/>
+                                    <outlet property="cancelButton" destination="0cu-0V-iX3" id="al2-1R-P0d"/>
+                                    <outlet property="downloadButton" destination="NQc-rH-gyb" id="pnU-ad-tSB"/>
                                     <outlet property="subLabel" destination="fvi-1o-OYu" id="IuJ-a3-cqu"/>
                                     <outlet property="titleLabel" destination="NqF-z9-dLe" id="FoI-k2-ptS"/>
+                                    <outlet property="trashButton" destination="4tP-T9-z4e" id="0oU-tZ-3Pa"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -307,23 +334,50 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cg3-l9-Bw7">
-                                            <rect key="frame" x="264" y="21" width="37" height="22"/>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X9J-Fb-Y6K">
+                                            <rect key="frame" x="264" y="0.0" width="56" height="74"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" image="298-circlex">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <state key="selected" image="218-trash2"/>
+                                            <state key="highlighted" image="298-circlex"/>
+                                            <connections>
+                                                <action selector="manButtonClicked:" destination="TTI-hp-WUm" eventType="touchUpInside" id="IkH-fZ-xEe"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eWe-3L-PK3">
+                                            <rect key="frame" x="264" y="0.0" width="56" height="74"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" image="265-download">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <state key="selected" image="218-trash2"/>
+                                            <state key="highlighted" image="298-circlex"/>
                                             <connections>
-                                                <action selector="showManage:" destination="TTI-hp-WUm" eventType="touchUpInside" id="4CF-If-kLI"/>
+                                                <action selector="manButtonClicked:" destination="TTI-hp-WUm" eventType="touchUpInside" id="qIu-kS-uHb"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KrQ-k4-tMk">
+                                            <rect key="frame" x="264" y="0.0" width="56" height="74"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" image="218-trash2">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <state key="selected" image="218-trash2"/>
+                                            <state key="highlighted" image="298-circlex"/>
+                                            <connections>
+                                                <action selector="manButtonClicked:" destination="TTI-hp-WUm" eventType="touchUpInside" id="HST-BQ-vYY"/>
                                             </connections>
                                         </button>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="manageButton" destination="Cg3-l9-Bw7" id="2Lp-RW-1Ji"/>
+                                    <outlet property="cancelButton" destination="X9J-Fb-Y6K" id="GPR-jq-dZW"/>
+                                    <outlet property="downloadButton" destination="eWe-3L-PK3" id="knd-mG-ZNt"/>
                                     <outlet property="subLabel" destination="oDf-Fq-4Kw" id="S5F-Qd-Aby"/>
                                     <outlet property="titleLabel" destination="vGo-vt-DUC" id="XL2-ER-wCV"/>
+                                    <outlet property="trashButton" destination="KrQ-k4-tMk" id="0vH-b6-vg4"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -627,23 +681,50 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dWf-Tb-UVn">
-                                            <rect key="frame" x="264" y="21" width="37" height="22"/>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YTd-gg-155">
+                                            <rect key="frame" x="264" y="0.0" width="56" height="74"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" image="298-circlex">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <state key="selected" image="218-trash2"/>
+                                            <state key="highlighted" image="298-circlex"/>
+                                            <connections>
+                                                <action selector="manButtonClicked:" destination="nhy-Lk-bun" eventType="touchUpInside" id="PUD-al-mvU"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PbT-Qi-Eeg">
+                                            <rect key="frame" x="264" y="0.0" width="56" height="74"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" image="265-download">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <state key="selected" image="218-trash2"/>
+                                            <state key="highlighted" image="298-circlex"/>
                                             <connections>
-                                                <action selector="showManage:" destination="nhy-Lk-bun" eventType="touchUpInside" id="Lwt-Bf-rrq"/>
+                                                <action selector="manButtonClicked:" destination="nhy-Lk-bun" eventType="touchUpInside" id="yBO-zh-RZO"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ht-3J-qRT">
+                                            <rect key="frame" x="264" y="0.0" width="56" height="74"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" image="218-trash2">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <state key="selected" image="218-trash2"/>
+                                            <state key="highlighted" image="298-circlex"/>
+                                            <connections>
+                                                <action selector="manButtonClicked:" destination="nhy-Lk-bun" eventType="touchUpInside" id="CbU-dD-BVH"/>
                                             </connections>
                                         </button>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="manageButton" destination="dWf-Tb-UVn" id="O2n-YJ-bXB"/>
+                                    <outlet property="cancelButton" destination="YTd-gg-155" id="Xx6-Xm-iTk"/>
+                                    <outlet property="downloadButton" destination="PbT-Qi-Eeg" id="nfh-Fk-R6M"/>
                                     <outlet property="subLabel" destination="14A-b9-bug" id="5PI-Tc-Uta"/>
                                     <outlet property="titleLabel" destination="9QS-jl-2zN" id="QiR-Bt-yXp"/>
+                                    <outlet property="trashButton" destination="2ht-3J-qRT" id="CHa-Sb-PEB"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -805,23 +886,50 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ohe-9h-dng">
-                                            <rect key="frame" x="264" y="21" width="37" height="22"/>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ifr-uF-gct">
+                                            <rect key="frame" x="264" y="0.0" width="56" height="74"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" image="265-download">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <state key="selected" image="218-trash2"/>
+                                            <state key="highlighted" image="298-circlex"/>
                                             <connections>
-                                                <action selector="showManage:" destination="j4v-YR-tWI" eventType="touchUpInside" id="vqu-YE-UIJ"/>
+                                                <action selector="manButtonClicked:" destination="j4v-YR-tWI" eventType="touchUpInside" id="g0U-V4-uH6"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7nd-0v-zlX">
+                                            <rect key="frame" x="264" y="0.0" width="56" height="74"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" image="298-circlex">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <state key="selected" image="218-trash2"/>
+                                            <state key="highlighted" image="298-circlex"/>
+                                            <connections>
+                                                <action selector="manButtonClicked:" destination="j4v-YR-tWI" eventType="touchUpInside" id="gk7-dR-P6k"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bAu-oZ-HfQ">
+                                            <rect key="frame" x="264" y="0.0" width="56" height="74"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" image="218-trash2">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <state key="selected" image="218-trash2"/>
+                                            <state key="highlighted" image="298-circlex"/>
+                                            <connections>
+                                                <action selector="manButtonClicked:" destination="j4v-YR-tWI" eventType="touchUpInside" id="DNY-HI-3V7"/>
                                             </connections>
                                         </button>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="manageButton" destination="Ohe-9h-dng" id="LDz-mG-uHE"/>
+                                    <outlet property="cancelButton" destination="7nd-0v-zlX" id="Qdp-Nx-rvG"/>
+                                    <outlet property="downloadButton" destination="ifr-uF-gct" id="H2d-dy-bjz"/>
                                     <outlet property="subLabel" destination="zXz-oq-J2F" id="NEO-Ui-jFG"/>
                                     <outlet property="titleLabel" destination="kGs-52-APm" id="1SA-JG-OA1"/>
+                                    <outlet property="trashButton" destination="bAu-oZ-HfQ" id="N9E-uk-1y7"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -882,6 +990,7 @@
         <image name="253-person" width="26" height="24"/>
         <image name="265-download" width="24" height="22"/>
         <image name="275-broadcast" width="26" height="24"/>
+        <image name="298-circlex" width="22" height="22"/>
         <image name="Background" width="320" height="71"/>
         <image name="Ju" width="30" height="30"/>
         <image name="JuBig" width="120" height="129"/>
