@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F29B6F719A4EDFA00EC8BBC /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F29B6F619A4EDFA00EC8BBC /* AudioToolbox.framework */; };
 		4F8A14E7199B8E00009F47B7 /* LAMUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F8A14E6199B8E00009F47B7 /* LAMUser.m */; };
 		4F8A14E9199EEC05009F47B7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F8A14E8199EEC05009F47B7 /* Images.xcassets */; };
 		4F8A14EC199EF5D5009F47B7 /* LAMHostListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F8A14EB199EF5D5009F47B7 /* LAMHostListVC.m */; };
@@ -48,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4F29B6F619A4EDFA00EC8BBC /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		4F8A14E5199B8E00009F47B7 /* LAMUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAMUser.h; sourceTree = "<group>"; };
 		4F8A14E6199B8E00009F47B7 /* LAMUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LAMUser.m; sourceTree = "<group>"; };
 		4F8A14E8199EEC05009F47B7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F29B6F719A4EDFA00EC8BBC /* AudioToolbox.framework in Frameworks */,
 				4FB7D04719943B51006DB7C8 /* AVFoundation.framework in Frameworks */,
 				4FD8682D1967B2AD006A1994 /* CoreGraphics.framework in Frameworks */,
 				4FD8682F1967B2AD006A1994 /* UIKit.framework in Frameworks */,
@@ -238,6 +241,7 @@
 		4FD868291967B2AD006A1994 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4F29B6F619A4EDFA00EC8BBC /* AudioToolbox.framework */,
 				4FB7D04619943B51006DB7C8 /* AVFoundation.framework */,
 				4FD8682A1967B2AD006A1994 /* Foundation.framework */,
 				4FD8682C1967B2AD006A1994 /* CoreGraphics.framework */,

@@ -29,37 +29,54 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+}
 
-    self.show = [LAMPlayingShow sharedInstance].playingShow;
-    self.title = self.show.title;
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
 
-    // setup player
-    self.playerItem = [AVPlayerItem playerItemWithURL:[NSURL URLWithString:self.show.audio]];
-    [self.playerItem addObserver:self forKeyPath:@"status" options:0 context:nil];
-    self.player = [AVPlayer playerWithPlayerItem:self.playerItem];
-    self.isPlaying = NO;
-    self.currentTimeLabel.text = @"N/A";
-    self.totalTimeLabel.text = @"N/A";
-    self.playProgress.progress = 0.0f;
-    __weak __typeof__(self) weakSelf = self;
-    [self.player addPeriodicTimeObserverForInterval:CMTimeMake(1, 2) queue:dispatch_get_main_queue() usingBlock:^(CMTime time) {
-        if (weakSelf.player.status == AVPlayerStatusReadyToPlay) {
-            NSUInteger currentSeconds = CMTimeGetSeconds([weakSelf.player currentTime]);
-            NSUInteger minutes = floor(currentSeconds / 60);
-            NSUInteger seconds = floor(currentSeconds % 60);
-            weakSelf.currentTimeLabel.text = [NSString stringWithFormat:@"%lu:%02lu", (unsigned long)minutes, (unsigned long)seconds];
+    if (![self.show isEqual:[LAMPlayingShow sharedInstance].playingShow]) {
+        self.show = [LAMPlayingShow sharedInstance].playingShow;
+        self.title = self.show.title;
 
-            NSUInteger totalSecond = CMTimeGetSeconds(weakSelf.player.currentItem.duration);
-            weakSelf.playProgress.progress = (double)currentSeconds / totalSecond;
+        // setup player
+        if (self.show.status == LAMSHOWSTAT_DOWNLOADED) {
+            self.playerItem = [AVPlayerItem playerItemWithURL:self.show.localFile];
         }
-    }];
+        else {
+            self.playerItem = [AVPlayerItem playerItemWithURL:[NSURL URLWithString:self.show.audio]];
+        }
+        [self.playerItem addObserver:self forKeyPath:@"status" options:0 context:nil];
+        self.player = [AVPlayer playerWithPlayerItem:self.playerItem];
+        self.isPlaying = NO;
+        self.currentTimeLabel.text = @"-:-";
+        self.totalTimeLabel.text = @"-:-";
+        self.playProgress.progress = 0.0f;
+        __weak __typeof__(self) weakSelf = self;
+        [self.player addPeriodicTimeObserverForInterval:CMTimeMake(1, 2) queue:dispatch_get_main_queue() usingBlock:^(CMTime time) {
+            if (weakSelf.player.status == AVPlayerStatusReadyToPlay) {
+                NSUInteger currentSeconds = CMTimeGetSeconds([weakSelf.player currentTime]);
+                NSUInteger minutes = floor(currentSeconds / 60);
+                NSUInteger seconds = floor(currentSeconds % 60);
+                weakSelf.currentTimeLabel.text = [NSString stringWithFormat:@"%lu:%02lu", (unsigned long)minutes, (unsigned long)seconds];
 
-    // setup detailView
-    self.detailView.backgroundColor = [UIColor clearColor];
-    [self.detailView loadHTMLString:self.show.detail baseURL:nil];
+                NSUInteger totalSecond = CMTimeGetSeconds(weakSelf.player.currentItem.duration);
+                if (totalSecond != 0) {
+                    weakSelf.playProgress.progress = (double)currentSeconds / totalSecond;
+                }
+                else {
+                    weakSelf.playProgress.progress = 0.0f;
+                }
+            }
+        }];
 
-    // setup button
-    [self.controlButton setImage:[UIImage imageNamed:@"Pause"] forState:UIControlStateSelected];
+        // setup detailView
+        self.detailView.backgroundColor = [UIColor clearColor];
+        [self.detailView loadHTMLString:self.show.detail baseURL:nil];
+        
+        // setup button
+        [self.controlButton setImage:[UIImage imageNamed:@"Pause"] forState:UIControlStateSelected];
+    }
 }
 
 - (IBAction)handleControlBtn:(id)sender {

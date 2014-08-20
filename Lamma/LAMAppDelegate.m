@@ -7,6 +7,8 @@
 //
 
 #import "LAMAppDelegate.h"
+@import AVFoundation;
+@import AudioToolbox;
 
 @implementation LAMAppDelegate
 
@@ -20,6 +22,16 @@
     NyaruCollection *col = [db collection:@"shows"];
     [col createIndex:@"type"];
     [col createIndex:@"host"];
+
+    AVAudioSession *audioSession = [AVAudioSession sharedInstance];
+
+    NSError *setCategoryError = nil;
+    BOOL success = [audioSession setCategory:AVAudioSessionCategoryPlayback error:&setCategoryError];
+    if (!success) { /* handle the error condition */ }
+
+    NSError *activationError = nil;
+    success = [audioSession setActive:YES error:&activationError];
+    if (!success) { /* handle the error condition */ }
 
     return YES;
 }
