@@ -7,6 +7,7 @@
 //
 
 #import "LAMSignupVC.h"
+#import "LAMOnboardVC.h"
 
 @interface LAMSignupVC ()
 
@@ -140,7 +141,7 @@
                 [SVProgressHUD showSuccessWithStatus:@"登录成功!"];
                 [[NSUserDefaults standardUserDefaults] setObject:responseObject[@"username"] forKey:@"username"];
                 [[NSUserDefaults standardUserDefaults] setObject:responseObject[@"token"] forKey:@"token"];
-                [self dismissViewControllerAnimated:YES completion:nil];
+                [self performSegueWithIdentifier:@"toOnboard" sender:self];
             }
             else {
                 UIAlertView *alert = [[UIAlertView alloc] initWithTitle:responseObject[@"error"] message:nil delegate:nil cancelButtonTitle:@"好" otherButtonTitles:nil];

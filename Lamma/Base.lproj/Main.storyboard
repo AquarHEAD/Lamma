@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--OnboardVC - 选择您想听的节目-->
         <scene sceneID="hkJ-RG-IXO">
             <objects>
-                <viewController id="Iuo-pk-kS3" sceneMemberID="viewController">
+                <viewController id="Iuo-pk-kS3" customClass="LAMOnboardVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ORf-u9-Kx1"/>
                         <viewControllerLayoutGuide type="bottom" id="oKL-jR-b6n"/>
@@ -23,6 +23,9 @@
                                 <state key="normal" backgroundImage="JuBig">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="clicked:" destination="Iuo-pk-kS3" eventType="touchUpInside" id="xpA-9s-bKo"/>
+                                </connections>
                             </button>
                             <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ozu-Q5-8Ga">
                                 <rect key="frame" x="30" y="329" width="120" height="128"/>
@@ -30,6 +33,9 @@
                                 <state key="normal" backgroundImage="QiBig">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="clicked:" destination="Iuo-pk-kS3" eventType="touchUpInside" id="Syw-FX-0hS"/>
+                                </connections>
                             </button>
                             <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eku-yk-ImR">
                                 <rect key="frame" x="170" y="104" width="120" height="128"/>
@@ -37,6 +43,9 @@
                                 <state key="normal" backgroundImage="ShuBig">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="clicked:" destination="Iuo-pk-kS3" eventType="touchUpInside" id="WDu-Vl-xfi"/>
+                                </connections>
                             </button>
                             <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="phg-9x-5gd">
                                 <rect key="frame" x="30" y="104" width="120" height="128"/>
@@ -44,15 +53,24 @@
                                 <state key="normal" backgroundImage="ZaoBig">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="clicked:" destination="Iuo-pk-kS3" eventType="touchUpInside" id="fJm-8g-WYI"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="7eW-0c-wBa"/>
+                    <navigationItem key="navigationItem" title="选择您想听的节目" id="7eW-0c-wBa"/>
+                    <connections>
+                        <outlet property="juButton" destination="nMB-O8-lVj" id="NaX-RS-uEh"/>
+                        <outlet property="qiButton" destination="ozu-Q5-8Ga" id="D2l-kI-2qw"/>
+                        <outlet property="shuButton" destination="Eku-yk-ImR" id="CRH-To-72f"/>
+                        <outlet property="zaoButton" destination="phg-9x-5gd" id="bN8-Tu-Cqs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b6F-ZZ-vds" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-333" y="8"/>
+            <point key="canvasLocation" x="60" y="-700"/>
         </scene>
         <!--Tab MainVC-->
         <scene sceneID="eKT-6E-tqZ">
@@ -612,12 +630,12 @@
                         <outletCollection property="signupCells" destination="HUs-4p-eXx" id="jiE-Zz-yoP"/>
                         <outletCollection property="signupCells" destination="AuB-ap-I6v" id="00A-uw-oPZ"/>
                         <outletCollection property="signupCells" destination="4Ft-3T-Rpw" id="239-6R-ufw"/>
-                        <segue destination="Iuo-pk-kS3" kind="push" id="B81-Vi-Juc"/>
+                        <segue destination="Iuo-pk-kS3" kind="push" identifier="toOnboard" id="B81-Vi-Juc"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ceo-TN-YGM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="60" y="-708"/>
+            <point key="canvasLocation" x="-333" y="-700"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="asW-jR-fvR">
@@ -633,7 +651,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r5y-fS-bOD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-333" y="-708"/>
+            <point key="canvasLocation" x="-726" y="-700"/>
         </scene>
         <!--Navigation Controller - 书-->
         <scene sceneID="bcR-YS-3q8">
@@ -778,30 +796,12 @@
                                 </cells>
                             </tableViewSection>
                             <tableViewSection id="iRa-94-zVf">
-                                <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="5bb-oM-t7E" style="IBUITableViewCellStyleDefault" id="kXl-Cj-9JO">
-                                        <rect key="frame" x="0.0" y="183" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kXl-Cj-9JO" id="q76-gh-7Ry">
-                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="精彩推荐" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5bb-oM-t7E">
-                                                    <rect key="frame" x="15" y="0.0" width="270" height="43"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
+                                <cells/>
                             </tableViewSection>
                             <tableViewSection id="9Wv-4N-MYC">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="ZcA-8I-VkR">
-                                        <rect key="frame" x="0.0" y="247" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="203" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZcA-8I-VkR" id="3p4-Fj-Zr7">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
