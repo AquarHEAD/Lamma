@@ -23,6 +23,7 @@
 		4F9E9B4119A03443005C4DE9 /* LAMPlayingShow.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F9E9B4019A03443005C4DE9 /* LAMPlayingShow.m */; };
 		4FB7D0431993BE00006DB7C8 /* LAMZaoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB7D0421993BE00006DB7C8 /* LAMZaoVC.m */; };
 		4FB7D04719943B51006DB7C8 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FB7D04619943B51006DB7C8 /* AVFoundation.framework */; };
+		4FB8E1E319A776C600DAB6DE /* LAMFavorVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB8E1E219A776C600DAB6DE /* LAMFavorVC.m */; };
 		4FD8682B1967B2AD006A1994 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FD8682A1967B2AD006A1994 /* Foundation.framework */; };
 		4FD8682D1967B2AD006A1994 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FD8682C1967B2AD006A1994 /* CoreGraphics.framework */; };
 		4FD8682F1967B2AD006A1994 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FD8682E1967B2AD006A1994 /* UIKit.framework */; };
@@ -52,7 +53,6 @@
 		4F29B6F619A4EDFA00EC8BBC /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		4F29B6F819A5050000EC8BBC /* LAMOnboardVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAMOnboardVC.h; sourceTree = "<group>"; };
 		4F29B6F919A5050000EC8BBC /* LAMOnboardVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LAMOnboardVC.m; sourceTree = "<group>"; };
-		4F29B6FB19A50DCC00EC8BBC /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		4F8A14E8199EEC05009F47B7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4F8A14EA199EF5D5009F47B7 /* LAMHostListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAMHostListVC.h; sourceTree = "<group>"; };
 		4F8A14EB199EF5D5009F47B7 /* LAMHostListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LAMHostListVC.m; sourceTree = "<group>"; };
@@ -79,6 +79,9 @@
 		4FB7D0411993BE00006DB7C8 /* LAMZaoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAMZaoVC.h; sourceTree = "<group>"; };
 		4FB7D0421993BE00006DB7C8 /* LAMZaoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LAMZaoVC.m; sourceTree = "<group>"; };
 		4FB7D04619943B51006DB7C8 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		4FB8E1E119A776C600DAB6DE /* LAMFavorVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAMFavorVC.h; sourceTree = "<group>"; };
+		4FB8E1E219A776C600DAB6DE /* LAMFavorVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LAMFavorVC.m; sourceTree = "<group>"; };
+		4FB8E1E419A77B5000DAB6DE /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		4FD868271967B2AD006A1994 /* Lamma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lamma.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FD8682A1967B2AD006A1994 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4FD8682C1967B2AD006A1994 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -189,6 +192,8 @@
 			children = (
 				4F9E9B3B19A02F6E005C4DE9 /* LAMUserVC.h */,
 				4F9E9B3C19A02F6E005C4DE9 /* LAMUserVC.m */,
+				4FB8E1E119A776C600DAB6DE /* LAMFavorVC.h */,
+				4FB8E1E219A776C600DAB6DE /* LAMFavorVC.m */,
 			);
 			name = User;
 			sourceTree = "<group>";
@@ -448,6 +453,7 @@
 				4F948FC6199283F500265DF0 /* LAMPlayerVC.m in Sources */,
 				4FD8683B1967B2AD006A1994 /* LAMAppDelegate.m in Sources */,
 				4F948FC3199283CD00265DF0 /* LAMShow.m in Sources */,
+				4FB8E1E319A776C600DAB6DE /* LAMFavorVC.m in Sources */,
 				4F93659A19A0578000F8B95A /* LAMShowCell.m in Sources */,
 				4F9E9B3D19A02F6E005C4DE9 /* LAMUserVC.m in Sources */,
 				4F8F47A2199FA62A004EB27A /* LAMTabMainVC.m in Sources */,
@@ -489,7 +495,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				4FD8683D1967B2AD006A1994 /* Base */,
-				4F29B6FB19A50DCC00EC8BBC /* zh-Hans */,
+				4FB8E1E419A77B5000DAB6DE /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

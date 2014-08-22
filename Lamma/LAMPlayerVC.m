@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *currentTimeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *totalTimeLabel;
 @property (weak, nonatomic) IBOutlet UIProgressView *playProgress;
+@property (weak, nonatomic) IBOutlet UIButton *favorButton;
 
 @property (nonatomic, strong) AVPlayer *player;
 @property (nonatomic, strong) AVPlayerItem *playerItem;
@@ -72,6 +73,14 @@
         
         // setup button
         [self.controlButton setImage:[UIImage imageNamed:@"Pause"] forState:UIControlStateSelected];
+
+        // setup favor
+        if (!self.show.favored) {
+            self.favorButton.layer.opacity = 0.2f;
+        }
+        else {
+            self.favorButton.layer.opacity = 0.9f;
+        }
     }
 }
 
@@ -93,6 +102,28 @@
     NSUInteger minutes = floor(totalSecond / 60);
     NSUInteger seconds = floor(totalSecond % 60);
     self.totalTimeLabel.text = [NSString stringWithFormat:@"%lu:%lu", (unsigned long)minutes, (unsigned long)seconds];
+}
+
+- (IBAction)doFavor:(id)sender {
+    if (self.show.favored) {
+        NSMutableArray *favored = [NSMutableArray arrayWithArray:[[NSUserDefaults standardUserDefaults] arrayForKey:@"favor"]];
+        [favored removeObject:self.show.key];
+        [[NSUserDefaults standardUserDefaults] setObject:favored forKey:@"favor"];
+        self.show.favored = NO;
+        self.favorButton.layer.opacity = 0.2f;
+    }
+    else {
+        NSArray *favored = [[NSUserDefaults standardUserDefaults] arrayForKey:@"favor"];
+        if ([favored count]) {
+            [[NSUserDefaults standardUserDefaults] setObject:[favored arrayByAddingObject:self.show.key] forKey:@"favor"];
+        }
+        else {
+            [[NSUserDefaults standardUserDefaults] setObject:@[self.show.key] forKey:@"favor"];
+        }
+
+         self.show.favored = YES;
+         self.favorButton.layer.opacity = 0.9f;
+    }
 }
 
 #pragma mark - Web view delegate

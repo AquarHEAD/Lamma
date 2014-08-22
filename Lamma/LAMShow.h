@@ -25,6 +25,7 @@
 @property (nonatomic) NSUInteger status;
 @property (nonatomic, strong) NSURL *localFile;
 @property (nonatomic, strong) NSURLSessionDownloadTask *downloadTask;
+@property (nonatomic) BOOL favored;
 
 + (instancetype)initFromDictionary:(NSDictionary *)dict;
 

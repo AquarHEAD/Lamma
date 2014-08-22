@@ -26,11 +26,20 @@
 /* Class = "IBUITextField"; placeholder = "phone"; ObjectID = "EDh-vP-h7c"; */
 "EDh-vP-h7c.placeholder" = "phone";
 
+/* Class = "IBUINavigationItem"; title = "我的收藏"; ObjectID = "EhV-Hl-pRI"; */
+"EhV-Hl-pRI.title" = "我的收藏";
+
+/* Class = "IBUILabel"; text = "Subtitle"; ObjectID = "G4h-xn-9na"; */
+"G4h-xn-9na.text" = "Subtitle";
+
 /* Class = "IBUILabel"; text = "_currentTime"; ObjectID = "HiA-fc-tCG"; */
 "HiA-fc-tCG.text" = "_currentTime";
 
 /* Class = "IBUITabBarItem"; title = "居"; ObjectID = "KHW-sa-Xdl"; */
 "KHW-sa-Xdl.title" = "居";
+
+/* Class = "IBUINavigationItem"; title = "个人管理"; ObjectID = "LOH-af-F4T"; */
+"LOH-af-F4T.title" = "个人管理";
 
 /* Class = "IBUITextField"; placeholder = "password"; ObjectID = "LcX-3j-fEi"; */
 "LcX-3j-fEi.placeholder" = "password";
@@ -104,11 +113,17 @@
 /* Class = "IBUILabel"; text = "用户名"; ObjectID = "ru9-tW-M0d"; */
 "ru9-tW-M0d.text" = "用户名";
 
+/* Class = "IBUILabel"; text = "Title"; ObjectID = "uWz-iW-0ow"; */
+"uWz-iW-0ow.text" = "Title";
+
 /* Class = "IBUILabel"; text = "Subtitle"; ObjectID = "vAs-dy-sf1"; */
 "vAs-dy-sf1.text" = "Subtitle";
 
 /* Class = "IBUILabel"; text = "Title"; ObjectID = "vGo-vt-DUC"; */
 "vGo-vt-DUC.text" = "Title";
+
+/* Class = "IBUILabel"; text = "我的收藏"; ObjectID = "vjo-gc-QcA"; */
+"vjo-gc-QcA.text" = "我的收藏";
 
 /* Class = "IBUISegmentedControl"; waM-yf-yOU.segmentTitles[0] = "男"; ObjectID = "waM-yf-yOU"; */
 "waM-yf-yOU.segmentTitles[0]" = "男";

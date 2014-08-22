@@ -14,6 +14,9 @@
 {
     LAMShow *show = [LAMShow new];
     show.key = dict[@"id"];
+    if (!show.key) {
+        show.key = dict[@"key"];
+    }
     show.type = dict[@"type"];
     show.title = dict[@"title"];
     show.subtitle = dict[@"subtitle"];
@@ -28,6 +31,13 @@
     }
     else {
         show.status = LAMSHOWSTAT_TODOWNLOAD;
+    }
+    NSArray *favored = [[NSUserDefaults standardUserDefaults] arrayForKey:@"favor"];
+    if ([favored containsObject:show.key]) {
+        show.favored = YES;
+    }
+    else {
+        show.favored = NO;
     }
     return show;
 }
