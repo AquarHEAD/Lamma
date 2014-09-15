@@ -39,6 +39,9 @@
 - (void)refresh:(id)sender
 {
     if ([sender isEqual:self.refreshControl]) {
+        NyaruDB *db = [NyaruDB instance];
+        NyaruCollection *col = [db collection:@"shows"];
+        [[col where:@"type" equal:@"qi"] remove];
         [SVProgressHUD show];
         [SVProgressHUD setStatus:@"载入中..."];
         AFHTTPRequestOperationManager *man = [AFHTTPRequestOperationManager manager];

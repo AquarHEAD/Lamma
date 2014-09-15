@@ -16,11 +16,13 @@
 @property (weak, nonatomic) IBOutlet UITextField *usernameField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordField;
 @property (weak, nonatomic) IBOutlet UITextField *phoneField;
-@property (weak, nonatomic) IBOutlet UISegmentedControl *genderSeg;
 @property (weak, nonatomic) IBOutlet UITextField *codeField;
 
 @property (strong, nonatomic) IBOutletCollection(UITableViewCell) NSArray *signupCells;
-@property (weak, nonatomic) IBOutlet UITableViewCell *codeCell;
+
+@property (strong, nonatomic) NSTimer *timer;
+@property (weak, nonatomic) IBOutlet UIButton *codeButton;
+@property (nonatomic) NSInteger secondLeft;
 
 @end
 
@@ -45,6 +47,9 @@
         AFHTTPRequestOperationManager *man = [AFHTTPRequestOperationManager manager];
         NSString *reqAddr = [NSString stringWithFormat:@"%@/user/add_code/", LAMSERVER];
         [man GET:reqAddr parameters:@{@"phone": self.phoneField.text} success:^(AFHTTPRequestOperation *operation, id responseObject) {
+            self.secondLeft = 30;
+            self.codeButton.enabled = NO;
+            self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(updateCodeButton) userInfo:nil repeats:YES];
             [SVProgressHUD showSuccessWithStatus:@"请查收包含验证码的短信!"];
             [self.codeField becomeFirstResponder];
         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
@@ -56,6 +61,18 @@
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"请输入正确的手机号码" message:nil delegate:nil cancelButtonTitle:@"好" otherButtonTitles:nil];
         [alert show];
         [self.phoneField becomeFirstResponder];
+    }
+}
+
+- (void)updateCodeButton {
+    if (self.secondLeft > 0) {
+        self.secondLeft -= 1;
+        [self.codeButton setTitle:[NSString stringWithFormat:@"%ld 秒后重新获取", (long)self.secondLeft] forState:UIControlStateNormal];
+    }
+    else {
+        [self.timer invalidate];
+        self.codeButton.enabled = YES;
+        [self.codeButton setTitle:@"获取验证码" forState:UIControlStateNormal];
     }
 }
 
@@ -80,10 +97,7 @@
             [self.phoneField becomeFirstResponder];
             return;
         }
-        NSString *gender = @"male";
-        if (self.genderSeg.selectedSegmentIndex == 1) {
-            gender = @"female";
-        }
+        NSString *gender = @"N/A";
         if (self.codeField.text.length != 4) {
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"请输入正确的验证码" message:nil delegate:nil cancelButtonTitle:@"好" otherButtonTitles:nil];
             [alert show];
@@ -105,6 +119,7 @@
             if (responseObject[@"result"]) {
                 [SVProgressHUD showSuccessWithStatus:@"注册成功!"];
                 self.funcSeg.selectedSegmentIndex = 1;
+                [self.timer invalidate];
                 [self funcSegChanged:self];
             }
             else {
@@ -165,6 +180,11 @@
         [self cells:self.signupCells setHidden:YES];
         [self reloadDataAnimated:YES];
     }
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 @end
