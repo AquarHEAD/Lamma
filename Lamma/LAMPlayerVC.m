@@ -45,7 +45,7 @@
         }
         [self.playerItem addObserver:self forKeyPath:@"status" options:0 context:nil];
         self.player = [AVPlayer playerWithPlayerItem:self.playerItem];
-        [LAMPlayingShow sharedInstance].sharedPlayer = self.player;
+//        [LAMPlayingShow sharedInstance].sharedPlayer = self.player;
         self.isPlaying = NO;
         self.currentTimeLabel.text = @"-:-";
         self.totalTimeLabel.text = @"-:-";

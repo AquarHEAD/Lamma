@@ -60,6 +60,8 @@
     }
     cell.titleLabel.text = thisShow.title;
     cell.subLabel.text = thisShow.subtitle;
+
+    cell.indicator.hidden = YES;
     if (thisShow.status == LAMSHOWSTAT_DOWNLOADED) {
         // show delete
         cell.downloadButton.hidden = YES;
@@ -69,7 +71,6 @@
         cell.downloadButton.hidden = NO;
         cell.trashButton.hidden = YES;
     }
-    cell.downloadProgressLabel.hidden = YES;
 
     return cell;
 }
@@ -82,17 +83,13 @@
     if ([manButton isEqual:thisCell.downloadButton]) {
         NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
         AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
-        NSProgress *progress = nil;
-        [progress addObserver:thisCell
-                   forKeyPath:@"fractionCompleted"
-                      options:NSKeyValueObservingOptionNew
-                      context:NULL];
         NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:thisShow.audio]];
-        thisShow.downloadTask = [manager downloadTaskWithRequest:request progress:&progress destination:^NSURL *(NSURL *targetPath, NSURLResponse *response) {
+        thisShow.downloadTask = [manager downloadTaskWithRequest:request progress:nil destination:^NSURL *(NSURL *targetPath, NSURLResponse *response) {
             return thisShow.localFile;
         } completionHandler:^(NSURLResponse *response, NSURL *filePath, NSError *error) {
-            thisCell.downloadProgressLabel.hidden = YES;
+            thisCell.indicator.hidden = YES;
             if (error) {
+                thisShow.status = LAMSHOWSTAT_TODOWNLOAD;
                 thisCell.downloadButton.hidden = NO;
                 thisCell.trashButton.hidden = YES;
             }
@@ -103,16 +100,16 @@
                 NSLog(@"File downloaded to: %@", filePath);
             }
         }];
-        [thisShow.downloadTask resume];
+        thisShow.status = LAMSHOWSTAT_DOWNLOADING;
         thisCell.downloadButton.hidden = YES;
-        thisCell.downloadProgressLabel.hidden = NO;
         thisCell.trashButton.hidden = YES;
+        thisCell.indicator.hidden = NO;
+        [thisShow.downloadTask resume];
     }
     else if ([manButton isEqual:thisCell.trashButton]){
-        [[NSFileManager defaultManager] removeItemAtPath:[thisShow.localFile absoluteString] error:nil];
+        [[NSFileManager defaultManager] removeItemAtPath:[thisShow.localFile path] error:nil];
         thisShow.status = LAMSHOWSTAT_TODOWNLOAD;
         thisCell.downloadButton.hidden = NO;
-        thisCell.downloadProgressLabel.hidden = YES;
         thisCell.trashButton.hidden = YES;
     }
 }

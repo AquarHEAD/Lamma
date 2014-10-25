@@ -123,17 +123,14 @@
                                                 <action selector="manButtonClicked:" destination="5bz-9z-tR8" eventType="touchUpInside" id="11r-0w-jDZ"/>
                                             </connections>
                                         </button>
-                                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mra-d4-EZN">
-                                            <rect key="frame" x="241" y="27" width="71" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="WeT-pb-VDq">
+                                            <rect key="frame" x="282" y="27" width="20" height="20"/>
+                                        </activityIndicatorView>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="downloadButton" destination="NQc-rH-gyb" id="pnU-ad-tSB"/>
-                                    <outlet property="downloadProgressLabel" destination="mra-d4-EZN" id="KaI-Qe-Drr"/>
+                                    <outlet property="indicator" destination="WeT-pb-VDq" id="TSx-Kk-fse"/>
                                     <outlet property="subLabel" destination="fvi-1o-OYu" id="IuJ-a3-cqu"/>
                                     <outlet property="titleLabel" destination="NqF-z9-dLe" id="FoI-k2-ptS"/>
                                     <outlet property="trashButton" destination="4tP-T9-z4e" id="0oU-tZ-3Pa"/>
@@ -386,17 +383,14 @@
                                                 <action selector="manButtonClicked:" destination="TTI-hp-WUm" eventType="touchUpInside" id="HST-BQ-vYY"/>
                                             </connections>
                                         </button>
-                                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yQa-FI-pey">
-                                            <rect key="frame" x="270" y="26" width="42" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="QBx-Su-Hi4">
+                                            <rect key="frame" x="282" y="27" width="20" height="20"/>
+                                        </activityIndicatorView>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="downloadButton" destination="eWe-3L-PK3" id="knd-mG-ZNt"/>
-                                    <outlet property="downloadProgressLabel" destination="yQa-FI-pey" id="6c0-17-ZXN"/>
+                                    <outlet property="indicator" destination="QBx-Su-Hi4" id="ndT-PD-4kg"/>
                                     <outlet property="subLabel" destination="oDf-Fq-4Kw" id="S5F-Qd-Aby"/>
                                     <outlet property="titleLabel" destination="vGo-vt-DUC" id="XL2-ER-wCV"/>
                                     <outlet property="trashButton" destination="KrQ-k4-tMk" id="0vH-b6-vg4"/>
@@ -673,17 +667,14 @@
                                                 <action selector="manButtonClicked:" destination="nhy-Lk-bun" eventType="touchUpInside" id="CbU-dD-BVH"/>
                                             </connections>
                                         </button>
-                                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QzN-og-N8j">
-                                            <rect key="frame" x="270" y="26" width="42" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="s1O-ta-5vq">
+                                            <rect key="frame" x="282" y="27" width="20" height="20"/>
+                                        </activityIndicatorView>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="downloadButton" destination="PbT-Qi-Eeg" id="nfh-Fk-R6M"/>
-                                    <outlet property="downloadProgressLabel" destination="QzN-og-N8j" id="kYI-pz-grv"/>
+                                    <outlet property="indicator" destination="s1O-ta-5vq" id="X0Z-U9-QWa"/>
                                     <outlet property="subLabel" destination="14A-b9-bug" id="5PI-Tc-Uta"/>
                                     <outlet property="titleLabel" destination="9QS-jl-2zN" id="QiR-Bt-yXp"/>
                                     <outlet property="trashButton" destination="2ht-3J-qRT" id="CHa-Sb-PEB"/>
@@ -762,17 +753,14 @@
                                                 <action selector="manButtonClicked:" destination="Nvf-VT-X9f" eventType="touchUpInside" id="Ebo-pv-N2H"/>
                                             </connections>
                                         </button>
-                                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7K5-BZ-TE0">
-                                            <rect key="frame" x="270" y="26" width="42" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="xPD-5k-vrj">
+                                            <rect key="frame" x="282" y="29" width="20" height="20"/>
+                                        </activityIndicatorView>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="downloadButton" destination="VkQ-wP-1Bb" id="3Wn-XL-vel"/>
-                                    <outlet property="downloadProgressLabel" destination="7K5-BZ-TE0" id="rff-8Y-8GL"/>
+                                    <outlet property="indicator" destination="xPD-5k-vrj" id="meG-dl-3HO"/>
                                     <outlet property="subLabel" destination="G4h-xn-9na" id="q84-v3-42h"/>
                                     <outlet property="titleLabel" destination="uWz-iW-0ow" id="S1G-Ad-Cl7"/>
                                     <outlet property="trashButton" destination="TT0-xf-gDE" id="B6m-iz-mtD"/>
@@ -938,17 +926,14 @@
                                                 <action selector="manButtonClicked:" destination="j4v-YR-tWI" eventType="touchUpInside" id="DNY-HI-3V7"/>
                                             </connections>
                                         </button>
-                                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7rI-l0-SsT">
-                                            <rect key="frame" x="270" y="26" width="42" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Jn8-Yo-wG1">
+                                            <rect key="frame" x="282" y="27" width="20" height="20"/>
+                                        </activityIndicatorView>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="downloadButton" destination="ifr-uF-gct" id="H2d-dy-bjz"/>
-                                    <outlet property="downloadProgressLabel" destination="7rI-l0-SsT" id="wmn-jf-OMz"/>
+                                    <outlet property="indicator" destination="Jn8-Yo-wG1" id="4gA-RD-1uD"/>
                                     <outlet property="subLabel" destination="zXz-oq-J2F" id="NEO-Ui-jFG"/>
                                     <outlet property="titleLabel" destination="kGs-52-APm" id="1SA-JG-OA1"/>
                                     <outlet property="trashButton" destination="bAu-oZ-HfQ" id="N9E-uk-1y7"/>

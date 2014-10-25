@@ -10,14 +10,4 @@
 
 @implementation LAMShowCell
 
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
-{
-    if ([keyPath isEqualToString:@"fractionCompleted"] && [object isKindOfClass:[NSProgress class]]) {
-        NSProgress *progress = (NSProgress *)object;
-        self.downloadProgressLabel.text = [NSString stringWithFormat:@"%.2f %%", progress.fractionCompleted * 100];
-//        [(UITableView *)(self.superview.superview) reloadData];
-        NSLog(@"Progress is %f", progress.fractionCompleted);
-    }
-}
-
 @end
