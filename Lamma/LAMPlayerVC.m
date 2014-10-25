@@ -27,6 +27,22 @@
 
 @implementation LAMPlayerVC
 
+static id s_singleton = nil;
++ (id) alloc {
+    if(s_singleton != nil)
+        return s_singleton;
+    return [super alloc];
+}
+- (id) initWithCoder:(NSCoder *)aDecoder {
+    if(s_singleton != nil)
+        return s_singleton;
+    self = [super initWithCoder:aDecoder];
+    if(self) {
+        s_singleton = self;
+    }
+    return self;
+}
+
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
@@ -45,7 +61,7 @@
         }
         [self.playerItem addObserver:self forKeyPath:@"status" options:0 context:nil];
         self.player = [AVPlayer playerWithPlayerItem:self.playerItem];
-//        [LAMPlayingShow sharedInstance].sharedPlayer = self.player;
+        [LAMPlayingShow sharedInstance].sharedPlayer = self.player;
         self.isPlaying = NO;
         self.currentTimeLabel.text = @"-:-";
         self.totalTimeLabel.text = @"-:-";
@@ -74,6 +90,12 @@
         
         // setup button
         [self.controlButton setImage:[UIImage imageNamed:@"Pause"] forState:UIControlStateSelected];
+        if (self.isPlaying) {
+            [self.controlButton setSelected:YES];
+        }
+        else {
+            [self.controlButton setSelected:NO];
+        }
 
         // setup favor
         if (!self.show.favored) {

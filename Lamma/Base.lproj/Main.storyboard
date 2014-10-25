@@ -107,7 +107,6 @@
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <state key="selected" image="218-trash2"/>
-                                            <state key="highlighted" image="298-circlex"/>
                                             <connections>
                                                 <action selector="manButtonClicked:" destination="5bz-9z-tR8" eventType="touchUpInside" id="bqn-DV-Emv"/>
                                             </connections>
@@ -118,7 +117,6 @@
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <state key="selected" image="218-trash2"/>
-                                            <state key="highlighted" image="298-circlex"/>
                                             <connections>
                                                 <action selector="manButtonClicked:" destination="5bz-9z-tR8" eventType="touchUpInside" id="11r-0w-jDZ"/>
                                             </connections>
@@ -367,7 +365,6 @@
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <state key="selected" image="218-trash2"/>
-                                            <state key="highlighted" image="298-circlex"/>
                                             <connections>
                                                 <action selector="manButtonClicked:" destination="TTI-hp-WUm" eventType="touchUpInside" id="qIu-kS-uHb"/>
                                             </connections>
@@ -651,7 +648,6 @@
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <state key="selected" image="218-trash2"/>
-                                            <state key="highlighted" image="298-circlex"/>
                                             <connections>
                                                 <action selector="manButtonClicked:" destination="nhy-Lk-bun" eventType="touchUpInside" id="yBO-zh-RZO"/>
                                             </connections>
@@ -662,7 +658,6 @@
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <state key="selected" image="218-trash2"/>
-                                            <state key="highlighted" image="298-circlex"/>
                                             <connections>
                                                 <action selector="manButtonClicked:" destination="nhy-Lk-bun" eventType="touchUpInside" id="CbU-dD-BVH"/>
                                             </connections>
@@ -737,7 +732,6 @@
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <state key="selected" image="218-trash2"/>
-                                            <state key="highlighted" image="298-circlex"/>
                                             <connections>
                                                 <action selector="manButtonClicked:" destination="Nvf-VT-X9f" eventType="touchUpInside" id="EFA-b9-idZ"/>
                                             </connections>
@@ -748,7 +742,6 @@
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <state key="selected" image="218-trash2"/>
-                                            <state key="highlighted" image="298-circlex"/>
                                             <connections>
                                                 <action selector="manButtonClicked:" destination="Nvf-VT-X9f" eventType="touchUpInside" id="Ebo-pv-N2H"/>
                                             </connections>
@@ -869,7 +862,7 @@
                     <navigationItem key="navigationItem" title="个人管理" id="LOH-af-F4T"/>
                     <connections>
                         <outlet property="usernameCell" destination="mKU-wr-2GY" id="ZxK-TK-brH"/>
-                        <segue destination="9c2-NN-beR" kind="modal" identifier="openLogin" id="7Bw-tS-5x7"/>
+                        <segue destination="9c2-NN-beR" kind="modal" identifier="openLogin" id="J9X-2J-kyM"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C6Q-cV-t1C" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -910,7 +903,6 @@
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <state key="selected" image="218-trash2"/>
-                                            <state key="highlighted" image="298-circlex"/>
                                             <connections>
                                                 <action selector="manButtonClicked:" destination="j4v-YR-tWI" eventType="touchUpInside" id="g0U-V4-uH6"/>
                                             </connections>
@@ -921,7 +913,6 @@
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <state key="selected" image="218-trash2"/>
-                                            <state key="highlighted" image="298-circlex"/>
                                             <connections>
                                                 <action selector="manButtonClicked:" destination="j4v-YR-tWI" eventType="touchUpInside" id="DNY-HI-3V7"/>
                                             </connections>
@@ -982,7 +973,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="gs9-cd-cdr"/>
         <segue reference="N9p-fP-uqE"/>
+        <segue reference="gs9-cd-cdr"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -13,7 +13,7 @@
 @interface LAMPlayingShow : NSObject
 
 @property (nonatomic, strong) LAMShow *playingShow;
-@property (nonatomic, weak) AVPlayer *sharedPlayer;
+@property (nonatomic, strong) AVPlayer *sharedPlayer;
 
 + (instancetype)sharedInstance;
 
