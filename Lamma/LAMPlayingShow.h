@@ -7,11 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <AVFoundation/AVFoundation.h>
 #import "LAMShow.h"
 
 @interface LAMPlayingShow : NSObject
 
 @property (nonatomic, strong) LAMShow *playingShow;
+@property (nonatomic, weak) AVPlayer *sharedPlayer;
 
 + (instancetype)sharedInstance;
 

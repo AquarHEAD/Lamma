@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4F29B6F719A4EDFA00EC8BBC /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F29B6F619A4EDFA00EC8BBC /* AudioToolbox.framework */; };
-		4F29B6FA19A5050000EC8BBC /* LAMOnboardVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F29B6F919A5050000EC8BBC /* LAMOnboardVC.m */; };
 		4F8A14E9199EEC05009F47B7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F8A14E8199EEC05009F47B7 /* Images.xcassets */; };
 		4F8A14EC199EF5D5009F47B7 /* LAMHostListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F8A14EB199EF5D5009F47B7 /* LAMHostListVC.m */; };
 		4F8F4790199F322F004EB27A /* LAMSignupVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F8F478F199F322F004EB27A /* LAMSignupVC.m */; };
@@ -36,6 +35,7 @@
 		4FD8684C1967B2AD006A1994 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FD8682E1967B2AD006A1994 /* UIKit.framework */; };
 		4FD868541967B2AD006A1994 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4FD868521967B2AD006A1994 /* InfoPlist.strings */; };
 		4FD868561967B2AD006A1994 /* LammaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FD868551967B2AD006A1994 /* LammaTests.m */; };
+		4FFECF5019FB632C0080E568 /* LAMOnboardVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FFECF4F19FB632C0080E568 /* LAMOnboardVC.m */; };
 		FE93672D28134E1EAE485219 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D2833F36B5A4E2DA95FF104 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -51,8 +51,6 @@
 
 /* Begin PBXFileReference section */
 		4F29B6F619A4EDFA00EC8BBC /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		4F29B6F819A5050000EC8BBC /* LAMOnboardVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAMOnboardVC.h; sourceTree = "<group>"; };
-		4F29B6F919A5050000EC8BBC /* LAMOnboardVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LAMOnboardVC.m; sourceTree = "<group>"; };
 		4F8A14E8199EEC05009F47B7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4F8A14EA199EF5D5009F47B7 /* LAMHostListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAMHostListVC.h; sourceTree = "<group>"; };
 		4F8A14EB199EF5D5009F47B7 /* LAMHostListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LAMHostListVC.m; sourceTree = "<group>"; };
@@ -98,6 +96,8 @@
 		4FD868511967B2AD006A1994 /* LammaTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LammaTests-Info.plist"; sourceTree = "<group>"; };
 		4FD868531967B2AD006A1994 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4FD868551967B2AD006A1994 /* LammaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LammaTests.m; sourceTree = "<group>"; };
+		4FFECF4E19FB632C0080E568 /* LAMOnboardVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAMOnboardVC.h; sourceTree = "<group>"; };
+		4FFECF4F19FB632C0080E568 /* LAMOnboardVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LAMOnboardVC.m; sourceTree = "<group>"; };
 		7D2833F36B5A4E2DA95FF104 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEB99D3DB26146B480FD672B /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -134,8 +134,8 @@
 			children = (
 				4F8F478E199F322F004EB27A /* LAMSignupVC.h */,
 				4F8F478F199F322F004EB27A /* LAMSignupVC.m */,
-				4F29B6F819A5050000EC8BBC /* LAMOnboardVC.h */,
-				4F29B6F919A5050000EC8BBC /* LAMOnboardVC.m */,
+				4FFECF4E19FB632C0080E568 /* LAMOnboardVC.h */,
+				4FFECF4F19FB632C0080E568 /* LAMOnboardVC.m */,
 			);
 			name = Signup;
 			sourceTree = "<group>";
@@ -446,6 +446,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F8A14EC199EF5D5009F47B7 /* LAMHostListVC.m in Sources */,
+				4FFECF5019FB632C0080E568 /* LAMOnboardVC.m in Sources */,
 				4F8F4790199F322F004EB27A /* LAMSignupVC.m in Sources */,
 				4FB7D0431993BE00006DB7C8 /* LAMZaoVC.m in Sources */,
 				4F9E9B4119A03443005C4DE9 /* LAMPlayingShow.m in Sources */,
@@ -457,7 +458,6 @@
 				4F93659A19A0578000F8B95A /* LAMShowCell.m in Sources */,
 				4F9E9B3D19A02F6E005C4DE9 /* LAMUserVC.m in Sources */,
 				4F8F47A2199FA62A004EB27A /* LAMTabMainVC.m in Sources */,
-				4F29B6FA19A5050000EC8BBC /* LAMOnboardVC.m in Sources */,
 				4F8F4796199F7A0A004EB27A /* LAMShuVC.m in Sources */,
 				4F8F4799199F88C5004EB27A /* LAMQiVC.m in Sources */,
 				4F8F479C199F8A83004EB27A /* LAMJuVC.m in Sources */,

@@ -109,7 +109,7 @@
         cell.downloadButton.hidden = NO;
         cell.trashButton.hidden = YES;
     }
-    cell.cancelButton.hidden = YES;
+    cell.downloadProgressLabel.hidden = YES;
 
     return cell;
 }
@@ -122,39 +122,37 @@
     if ([manButton isEqual:thisCell.downloadButton]) {
         NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
         AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
+        NSProgress *progress = nil;
+        [progress addObserver:thisCell
+                   forKeyPath:@"fractionCompleted"
+                      options:NSKeyValueObservingOptionNew
+                      context:NULL];
         NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:thisShow.audio]];
-        thisShow.downloadTask = [manager downloadTaskWithRequest:request progress:nil destination:^NSURL *(NSURL *targetPath, NSURLResponse *response) {
+        thisShow.downloadTask = [manager downloadTaskWithRequest:request progress:&progress destination:^NSURL *(NSURL *targetPath, NSURLResponse *response) {
             return thisShow.localFile;
         } completionHandler:^(NSURLResponse *response, NSURL *filePath, NSError *error) {
+            thisCell.downloadProgressLabel.hidden = YES;
             if (error) {
                 thisCell.downloadButton.hidden = NO;
-                thisCell.cancelButton.hidden = YES;
                 thisCell.trashButton.hidden = YES;
             }
             else {
                 thisShow.status = LAMSHOWSTAT_DOWNLOADED;
                 thisCell.downloadButton.hidden = YES;
-                thisCell.cancelButton.hidden = YES;
                 thisCell.trashButton.hidden = NO;
                 NSLog(@"File downloaded to: %@", filePath);
             }
         }];
         [thisShow.downloadTask resume];
         thisCell.downloadButton.hidden = YES;
-        thisCell.cancelButton.hidden = NO;
-        thisCell.trashButton.hidden = YES;
-    }
-    else if ([manButton isEqual:thisCell.cancelButton]) {
-        [thisShow.downloadTask cancel];
-        thisCell.downloadButton.hidden = NO;
-        thisCell.cancelButton.hidden = YES;
+        thisCell.downloadProgressLabel.hidden = NO;
         thisCell.trashButton.hidden = YES;
     }
     else if ([manButton isEqual:thisCell.trashButton]){
         [[NSFileManager defaultManager] removeItemAtPath:[thisShow.localFile absoluteString] error:nil];
         thisShow.status = LAMSHOWSTAT_TODOWNLOAD;
         thisCell.downloadButton.hidden = NO;
-        thisCell.cancelButton.hidden = YES;
+        thisCell.downloadProgressLabel.hidden = YES;
         thisCell.trashButton.hidden = YES;
     }
 }
@@ -162,8 +160,9 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [[LAMPlayingShow sharedInstance].sharedPlayer pause];
     [LAMPlayingShow sharedInstance].playingShow = self.shows[indexPath.row];
-    self.tabBarController.selectedIndex = 2;
+    [self performSegueWithIdentifier:@"shuToPlayer" sender:self];
 }
 
 @end

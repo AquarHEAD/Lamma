@@ -7,7 +7,6 @@
 //
 
 #import "LAMSignupVC.h"
-#import "LAMOnboardVC.h"
 
 @interface LAMSignupVC ()
 
@@ -37,7 +36,13 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    [self.usernameField becomeFirstResponder];
+    // check if has logged in
+    if ([[NSUserDefaults standardUserDefaults] stringForKey:@"username"] && [[NSUserDefaults standardUserDefaults] stringForKey:@"token"]) {
+        [self performSegueWithIdentifier:@"toOnboard" sender:self];
+    }
+    else {
+        [self.usernameField becomeFirstResponder];
+    }
 }
 
 - (IBAction)getCode:(id)sender {

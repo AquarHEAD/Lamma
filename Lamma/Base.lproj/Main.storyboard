@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A361c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="b67-Em-Fcs">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="9c2-NN-beR">
     <dependencies>
-        <deployment defaultVersion="1792" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -24,7 +24,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="clicked:" destination="Iuo-pk-kS3" eventType="touchUpInside" id="xpA-9s-bKo"/>
+                                    <segue destination="j4v-YR-tWI" kind="push" id="Jgw-fF-AdU"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ozu-Q5-8Ga">
@@ -33,7 +33,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="clicked:" destination="Iuo-pk-kS3" eventType="touchUpInside" id="Syw-FX-0hS"/>
+                                    <segue destination="nhy-Lk-bun" kind="push" id="vmV-dT-eET"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eku-yk-ImR">
@@ -42,7 +42,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="clicked:" destination="Iuo-pk-kS3" eventType="touchUpInside" id="WDu-Vl-xfi"/>
+                                    <segue destination="TTI-hp-WUm" kind="push" id="sQS-C0-y1g"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="phg-9x-5gd">
@@ -51,46 +51,25 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="clicked:" destination="Iuo-pk-kS3" eventType="touchUpInside" id="fJm-8g-WYI"/>
+                                    <segue destination="L4z-Wv-QOa" kind="push" id="Qqd-TC-TNl"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="选择您想听的节目" id="7eW-0c-wBa"/>
-                    <connections>
-                        <outlet property="juButton" destination="nMB-O8-lVj" id="NaX-RS-uEh"/>
-                        <outlet property="qiButton" destination="ozu-Q5-8Ga" id="D2l-kI-2qw"/>
-                        <outlet property="shuButton" destination="Eku-yk-ImR" id="CRH-To-72f"/>
-                        <outlet property="zaoButton" destination="phg-9x-5gd" id="bN8-Tu-Cqs"/>
-                    </connections>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="选择您想听的节目" id="7eW-0c-wBa">
+                        <barButtonItem key="rightBarButtonItem" image="253-person" id="Dy5-Ui-Pw6">
+                            <connections>
+                                <segue destination="Y5Z-dy-i8F" kind="push" id="wf5-gb-sMJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b6F-ZZ-vds" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="60" y="-700"/>
-        </scene>
-        <!--Tab MainVC-->
-        <scene sceneID="eKT-6E-tqZ">
-            <objects>
-                <tabBarController definesPresentationContext="YES" id="b67-Em-Fcs" customClass="LAMTabMainVC" sceneMemberID="viewController">
-                    <nil key="simulatedBottomBarMetrics"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="xgg-Xq-gcS">
-                        <rect key="frame" x="129" y="330" width="163" height="49"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="P0X-JD-nqW" kind="relationship" relationship="viewControllers" id="7GR-7e-NxX"/>
-                        <segue destination="iBZ-FG-pDc" kind="relationship" relationship="viewControllers" id="Ptq-Ox-eHq"/>
-                        <segue destination="E7I-zp-rup" kind="relationship" relationship="viewControllers" id="0Lk-qf-2xT"/>
-                        <segue destination="jv1-jy-7S1" kind="relationship" relationship="viewControllers" id="6uR-IQ-An4"/>
-                        <segue destination="9lj-dh-TfM" kind="relationship" relationship="viewControllers" id="KbB-hU-Jrl"/>
-                        <segue destination="9c2-NN-beR" kind="modal" identifier="openSignup" id="bJ9-jG-ghn"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="26G-rf-0eh" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="60" y="8"/>
+            <point key="canvasLocation" x="-536" y="-7"/>
         </scene>
         <!--枣子讯-->
         <scene sceneID="GDe-Tu-j3z">
@@ -133,17 +112,6 @@
                                                 <action selector="manButtonClicked:" destination="5bz-9z-tR8" eventType="touchUpInside" id="bqn-DV-Emv"/>
                                             </connections>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0cu-0V-iX3">
-                                            <rect key="frame" x="264" y="0.0" width="56" height="73"/>
-                                            <state key="normal" image="298-circlex">
-                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                            </state>
-                                            <state key="selected" image="218-trash2"/>
-                                            <state key="highlighted" image="298-circlex"/>
-                                            <connections>
-                                                <action selector="manButtonClicked:" destination="5bz-9z-tR8" eventType="touchUpInside" id="EGG-CE-i4B"/>
-                                            </connections>
-                                        </button>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4tP-T9-z4e">
                                             <rect key="frame" x="264" y="0.0" width="56" height="74"/>
                                             <state key="normal" image="218-trash2">
@@ -155,11 +123,17 @@
                                                 <action selector="manButtonClicked:" destination="5bz-9z-tR8" eventType="touchUpInside" id="11r-0w-jDZ"/>
                                             </connections>
                                         </button>
+                                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mra-d4-EZN">
+                                            <rect key="frame" x="241" y="27" width="71" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="cancelButton" destination="0cu-0V-iX3" id="al2-1R-P0d"/>
                                     <outlet property="downloadButton" destination="NQc-rH-gyb" id="pnU-ad-tSB"/>
+                                    <outlet property="downloadProgressLabel" destination="mra-d4-EZN" id="KaI-Qe-Drr"/>
                                     <outlet property="subLabel" destination="fvi-1o-OYu" id="IuJ-a3-cqu"/>
                                     <outlet property="titleLabel" destination="NqF-z9-dLe" id="FoI-k2-ptS"/>
                                     <outlet property="trashButton" destination="4tP-T9-z4e" id="0oU-tZ-3Pa"/>
@@ -178,10 +152,13 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="GdN-sl-4Dg" kind="push" identifier="zaoToPlayer" id="N9p-fP-uqE"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JdK-P8-L83" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1621" y="-1389"/>
+            <point key="canvasLocation" x="1621" y="-864"/>
         </scene>
         <!--枣子讯-->
         <scene sceneID="qZx-eU-eZX">
@@ -237,23 +214,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rJD-Ds-Cgf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1213" y="-1389"/>
-        </scene>
-        <!--播放中-->
-        <scene sceneID="Wb4-Bt-MpD">
-            <objects>
-                <navigationController definesPresentationContext="YES" id="E7I-zp-rup" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="播放中" image="275-broadcast" id="3Iu-By-48X"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OS0-qJ-mfP">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="GdN-sl-4Dg" kind="relationship" relationship="rootViewController" id="DfF-mJ-j05"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ycf-Lt-S7C" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="785" y="-11"/>
+            <point key="canvasLocation" x="1213" y="-863"/>
         </scene>
         <!--PlayerVC-->
         <scene sceneID="puL-9t-IYc">
@@ -274,7 +235,7 @@
                                     <constraint firstAttribute="width" constant="320" id="QBT-UA-Pkg"/>
                                 </constraints>
                             </imageView>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dua-0z-7nk">
+                            <webView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dua-0z-7nk">
                                 <rect key="frame" x="0.0" y="66" width="320" height="382"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -312,7 +273,7 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gqd-Ow-yF4">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gqd-Ow-yF4">
                                 <rect key="frame" x="274" y="418" width="26" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="26" id="929-zC-vze"/>
@@ -373,7 +334,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Gd-dl-PTy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1213" y="-11"/>
+            <point key="canvasLocation" x="2672" y="1"/>
         </scene>
         <!--牛角挂书-->
         <scene sceneID="4X2-ND-Jeo">
@@ -403,17 +364,6 @@
                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X9J-Fb-Y6K">
-                                            <rect key="frame" x="264" y="0.0" width="56" height="74"/>
-                                            <state key="normal" image="298-circlex">
-                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                            </state>
-                                            <state key="selected" image="218-trash2"/>
-                                            <state key="highlighted" image="298-circlex"/>
-                                            <connections>
-                                                <action selector="manButtonClicked:" destination="TTI-hp-WUm" eventType="touchUpInside" id="IkH-fZ-xEe"/>
-                                            </connections>
-                                        </button>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eWe-3L-PK3">
                                             <rect key="frame" x="264" y="0.0" width="56" height="74"/>
                                             <state key="normal" image="265-download">
@@ -436,11 +386,17 @@
                                                 <action selector="manButtonClicked:" destination="TTI-hp-WUm" eventType="touchUpInside" id="HST-BQ-vYY"/>
                                             </connections>
                                         </button>
+                                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yQa-FI-pey">
+                                            <rect key="frame" x="270" y="26" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="cancelButton" destination="X9J-Fb-Y6K" id="GPR-jq-dZW"/>
                                     <outlet property="downloadButton" destination="eWe-3L-PK3" id="knd-mG-ZNt"/>
+                                    <outlet property="downloadProgressLabel" destination="yQa-FI-pey" id="6c0-17-ZXN"/>
                                     <outlet property="subLabel" destination="oDf-Fq-4Kw" id="S5F-Qd-Aby"/>
                                     <outlet property="titleLabel" destination="vGo-vt-DUC" id="XL2-ER-wCV"/>
                                     <outlet property="trashButton" destination="KrQ-k4-tMk" id="0vH-b6-vg4"/>
@@ -461,10 +417,13 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <segue destination="GdN-sl-4Dg" kind="push" identifier="shuToPlayer" id="svU-hu-1zY"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="esx-gq-fWq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1213" y="-681"/>
+            <point key="canvasLocation" x="1213" y="-155"/>
         </scene>
         <!--SignupVC-->
         <scene sceneID="lK2-EY-ovY">
@@ -646,7 +605,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ceo-TN-YGM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-333" y="-700"/>
+            <point key="canvasLocation" x="-949" y="-7"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="asW-jR-fvR">
@@ -662,23 +621,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r5y-fS-bOD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-726" y="-700"/>
-        </scene>
-        <!--书-->
-        <scene sceneID="bcR-YS-3q8">
-            <objects>
-                <navigationController definesPresentationContext="YES" id="iBZ-FG-pDc" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="书" image="Shu" id="xQO-cM-ZR6"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="33L-7h-F4G">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="TTI-hp-WUm" kind="relationship" relationship="rootViewController" id="0hG-Wv-TXi"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="A7h-U1-c2J" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="785" y="-681"/>
+            <point key="canvasLocation" x="-1342" y="-7"/>
         </scene>
         <!--仓箱可期-->
         <scene sceneID="JhN-Re-2Ct">
@@ -708,17 +651,6 @@
                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YTd-gg-155">
-                                            <rect key="frame" x="264" y="0.0" width="56" height="74"/>
-                                            <state key="normal" image="298-circlex">
-                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                            </state>
-                                            <state key="selected" image="218-trash2"/>
-                                            <state key="highlighted" image="298-circlex"/>
-                                            <connections>
-                                                <action selector="manButtonClicked:" destination="nhy-Lk-bun" eventType="touchUpInside" id="PUD-al-mvU"/>
-                                            </connections>
-                                        </button>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PbT-Qi-Eeg">
                                             <rect key="frame" x="264" y="0.0" width="56" height="74"/>
                                             <state key="normal" image="265-download">
@@ -741,11 +673,17 @@
                                                 <action selector="manButtonClicked:" destination="nhy-Lk-bun" eventType="touchUpInside" id="CbU-dD-BVH"/>
                                             </connections>
                                         </button>
+                                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QzN-og-N8j">
+                                            <rect key="frame" x="270" y="26" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="cancelButton" destination="YTd-gg-155" id="Xx6-Xm-iTk"/>
                                     <outlet property="downloadButton" destination="PbT-Qi-Eeg" id="nfh-Fk-R6M"/>
+                                    <outlet property="downloadProgressLabel" destination="QzN-og-N8j" id="kYI-pz-grv"/>
                                     <outlet property="subLabel" destination="14A-b9-bug" id="5PI-Tc-Uta"/>
                                     <outlet property="titleLabel" destination="9QS-jl-2zN" id="QiR-Bt-yXp"/>
                                     <outlet property="trashButton" destination="2ht-3J-qRT" id="CHa-Sb-PEB"/>
@@ -766,6 +704,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <segue destination="GdN-sl-4Dg" kind="push" identifier="qiToPlayer" id="jkE-pp-7Ae"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qzo-py-F8W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -799,17 +740,6 @@
                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JdI-V7-f3F">
-                                            <rect key="frame" x="264" y="0.0" width="56" height="74"/>
-                                            <state key="normal" image="298-circlex">
-                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                            </state>
-                                            <state key="selected" image="218-trash2"/>
-                                            <state key="highlighted" image="298-circlex"/>
-                                            <connections>
-                                                <action selector="manButtonClicked:" destination="Nvf-VT-X9f" eventType="touchUpInside" id="smE-tX-65C"/>
-                                            </connections>
-                                        </button>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VkQ-wP-1Bb">
                                             <rect key="frame" x="264" y="0.0" width="56" height="74"/>
                                             <state key="normal" image="265-download">
@@ -832,11 +762,17 @@
                                                 <action selector="manButtonClicked:" destination="Nvf-VT-X9f" eventType="touchUpInside" id="Ebo-pv-N2H"/>
                                             </connections>
                                         </button>
+                                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7K5-BZ-TE0">
+                                            <rect key="frame" x="270" y="26" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="cancelButton" destination="JdI-V7-f3F" id="KeZ-4P-ILk"/>
                                     <outlet property="downloadButton" destination="VkQ-wP-1Bb" id="3Wn-XL-vel"/>
+                                    <outlet property="downloadProgressLabel" destination="7K5-BZ-TE0" id="rff-8Y-8GL"/>
                                     <outlet property="subLabel" destination="G4h-xn-9na" id="q84-v3-42h"/>
                                     <outlet property="titleLabel" destination="uWz-iW-0ow" id="S1G-Ad-Cl7"/>
                                     <outlet property="trashButton" destination="TT0-xf-gDE" id="B6m-iz-mtD"/>
@@ -849,10 +785,13 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="我的收藏" id="EhV-Hl-pRI"/>
+                    <connections>
+                        <segue destination="GdN-sl-4Dg" kind="push" identifier="favorToPlayer" id="odq-Xp-gi3"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IdV-DI-FkG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2520" y="-11"/>
+            <point key="canvasLocation" x="3138" y="1402"/>
         </scene>
         <!--个人管理-->
         <scene sceneID="9ze-l2-2Ev">
@@ -872,7 +811,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="_username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aYD-NB-FxQ">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aYD-NB-FxQ">
                                                     <rect key="frame" x="15" y="0.0" width="290" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -947,23 +886,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C6Q-cV-t1C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2048" y="-11"/>
-        </scene>
-        <!--期-->
-        <scene sceneID="my5-hh-8xc">
-            <objects>
-                <navigationController definesPresentationContext="YES" id="jv1-jy-7S1" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="期" image="Qi" id="TJk-wD-INV"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QyT-cx-nAt">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="nhy-Lk-bun" kind="relationship" relationship="rootViewController" id="x4k-VV-kgj"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="EFM-AT-dar" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="785" y="666"/>
+            <point key="canvasLocation" x="2672" y="1402"/>
         </scene>
         <!--奇货可居-->
         <scene sceneID="jUA-jd-5t1">
@@ -1004,17 +927,6 @@
                                                 <action selector="manButtonClicked:" destination="j4v-YR-tWI" eventType="touchUpInside" id="g0U-V4-uH6"/>
                                             </connections>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7nd-0v-zlX">
-                                            <rect key="frame" x="264" y="0.0" width="56" height="74"/>
-                                            <state key="normal" image="298-circlex">
-                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                            </state>
-                                            <state key="selected" image="218-trash2"/>
-                                            <state key="highlighted" image="298-circlex"/>
-                                            <connections>
-                                                <action selector="manButtonClicked:" destination="j4v-YR-tWI" eventType="touchUpInside" id="gk7-dR-P6k"/>
-                                            </connections>
-                                        </button>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bAu-oZ-HfQ">
                                             <rect key="frame" x="264" y="0.0" width="56" height="74"/>
                                             <state key="normal" image="218-trash2">
@@ -1026,11 +938,17 @@
                                                 <action selector="manButtonClicked:" destination="j4v-YR-tWI" eventType="touchUpInside" id="DNY-HI-3V7"/>
                                             </connections>
                                         </button>
+                                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7rI-l0-SsT">
+                                            <rect key="frame" x="270" y="26" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="cancelButton" destination="7nd-0v-zlX" id="Qdp-Nx-rvG"/>
                                     <outlet property="downloadButton" destination="ifr-uF-gct" id="H2d-dy-bjz"/>
+                                    <outlet property="downloadProgressLabel" destination="7rI-l0-SsT" id="wmn-jf-OMz"/>
                                     <outlet property="subLabel" destination="zXz-oq-J2F" id="NEO-Ui-jFG"/>
                                     <outlet property="titleLabel" destination="kGs-52-APm" id="1SA-JG-OA1"/>
                                     <outlet property="trashButton" destination="bAu-oZ-HfQ" id="N9E-uk-1y7"/>
@@ -1051,42 +969,13 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <segue destination="GdN-sl-4Dg" kind="push" identifier="juToPlayer" id="5g7-Jh-k5a"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P6B-6k-uX4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1213" y="1402"/>
-        </scene>
-        <!--居-->
-        <scene sceneID="Eyd-2d-9T3">
-            <objects>
-                <navigationController definesPresentationContext="YES" id="9lj-dh-TfM" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="居" image="Ju" id="KHW-sa-Xdl"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZZ1-VI-Kw0">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="j4v-YR-tWI" kind="relationship" relationship="rootViewController" id="TI8-8F-LO3"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="adO-bz-3ii" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="785" y="1402"/>
-        </scene>
-        <!--枣-->
-        <scene sceneID="FeA-gs-xw9">
-            <objects>
-                <navigationController definesPresentationContext="YES" id="P0X-JD-nqW" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="枣" image="Zao" id="fCK-vQ-6f9"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="VAv-sI-2Tb">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="L4z-Wv-QOa" kind="relationship" relationship="rootViewController" id="3J2-yA-fdI"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bbM-zF-yDY" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="785" y="-1389"/>
         </scene>
     </scenes>
     <resources>
@@ -1094,17 +983,12 @@
         <image name="218-trash2" width="16" height="21"/>
         <image name="253-person" width="26" height="24"/>
         <image name="265-download" width="24" height="22"/>
-        <image name="275-broadcast" width="26" height="24"/>
         <image name="298-circlex" width="22" height="22"/>
         <image name="Background" width="320" height="71"/>
-        <image name="Ju" width="30" height="30"/>
         <image name="JuBig" width="120" height="129"/>
-        <image name="Qi" width="30" height="30"/>
         <image name="QiBig" width="120" height="127"/>
-        <image name="Shu" width="30" height="30"/>
         <image name="ShuBig" width="120" height="127"/>
         <image name="Start" width="19" height="19"/>
-        <image name="Zao" width="30" height="30"/>
         <image name="ZaoBig" width="120" height="127"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -1113,7 +997,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="pCZ-4e-Vlt"/>
-        <segue reference="7Bw-tS-5x7"/>
+        <segue reference="gs9-cd-cdr"/>
+        <segue reference="N9p-fP-uqE"/>
     </inferredMetricsTieBreakers>
 </document>

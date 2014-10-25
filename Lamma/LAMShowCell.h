@@ -14,7 +14,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *subLabel;
 
 @property (weak, nonatomic) IBOutlet UIButton *downloadButton;
-@property (weak, nonatomic) IBOutlet UIButton *cancelButton;
+@property (weak, nonatomic) IBOutlet UILabel *downloadProgressLabel;
 @property (weak, nonatomic) IBOutlet UIButton *trashButton;
 
 @end
