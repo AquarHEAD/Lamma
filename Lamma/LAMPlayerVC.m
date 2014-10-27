@@ -16,7 +16,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *controlButton;
 @property (weak, nonatomic) IBOutlet UILabel *currentTimeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *totalTimeLabel;
-@property (weak, nonatomic) IBOutlet UIProgressView *playProgress;
+@property (weak, nonatomic) IBOutlet UISlider *progressSlider;
 @property (weak, nonatomic) IBOutlet UIButton *favorButton;
 
 @property (nonatomic, strong) AVPlayer *player;
@@ -65,7 +65,7 @@ static id s_singleton = nil;
         self.isPlaying = NO;
         self.currentTimeLabel.text = @"-:-";
         self.totalTimeLabel.text = @"-:-";
-        self.playProgress.progress = 0.0f;
+        self.progressSlider.value = 0.0f;
         __weak __typeof__(self) weakSelf = self;
         [self.player addPeriodicTimeObserverForInterval:CMTimeMake(1, 2) queue:dispatch_get_main_queue() usingBlock:^(CMTime time) {
             if (weakSelf.player.status == AVPlayerStatusReadyToPlay) {
@@ -76,10 +76,10 @@ static id s_singleton = nil;
 
                 NSUInteger totalSecond = CMTimeGetSeconds(weakSelf.player.currentItem.duration);
                 if (totalSecond != 0) {
-                    weakSelf.playProgress.progress = (double)currentSeconds / totalSecond;
+                    weakSelf.progressSlider.value = (double)currentSeconds / totalSecond;
                 }
                 else {
-                    weakSelf.playProgress.progress = 0.0f;
+                    weakSelf.progressSlider.value = 0.0f;
                 }
             }
         }];
@@ -147,6 +147,10 @@ static id s_singleton = nil;
          self.show.favored = YES;
          self.favorButton.layer.opacity = 0.9f;
     }
+}
+
+- (IBAction)sliderDragged:(id)sender {
+    [self.player seekToTime:CMTimeMake(self.progressSlider.value * CMTimeGetSeconds(self.player.currentItem.duration), 1)];
 }
 
 #pragma mark - Web view delegate
