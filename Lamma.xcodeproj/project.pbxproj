@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4F29B6F719A4EDFA00EC8BBC /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F29B6F619A4EDFA00EC8BBC /* AudioToolbox.framework */; };
+		4F3BDB061A0D4AE900BBA885 /* NSFileManager+LAMSkipBackup.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F3BDB051A0D4AE900BBA885 /* NSFileManager+LAMSkipBackup.m */; };
 		4F8A14E9199EEC05009F47B7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F8A14E8199EEC05009F47B7 /* Images.xcassets */; };
 		4F8A14EC199EF5D5009F47B7 /* LAMHostListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F8A14EB199EF5D5009F47B7 /* LAMHostListVC.m */; };
 		4F8F4790199F322F004EB27A /* LAMSignupVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F8F478F199F322F004EB27A /* LAMSignupVC.m */; };
@@ -51,6 +52,8 @@
 
 /* Begin PBXFileReference section */
 		4F29B6F619A4EDFA00EC8BBC /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		4F3BDB041A0D4AE900BBA885 /* NSFileManager+LAMSkipBackup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+LAMSkipBackup.h"; sourceTree = "<group>"; };
+		4F3BDB051A0D4AE900BBA885 /* NSFileManager+LAMSkipBackup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+LAMSkipBackup.m"; sourceTree = "<group>"; };
 		4F8A14E8199EEC05009F47B7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4F8A14EA199EF5D5009F47B7 /* LAMHostListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAMHostListVC.h; sourceTree = "<group>"; };
 		4F8A14EB199EF5D5009F47B7 /* LAMHostListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LAMHostListVC.m; sourceTree = "<group>"; };
@@ -282,6 +285,8 @@
 				4FD868331967B2AD006A1994 /* InfoPlist.strings */,
 				4FD868361967B2AD006A1994 /* main.m */,
 				4FD868381967B2AD006A1994 /* Lamma-Prefix.pch */,
+				4F3BDB041A0D4AE900BBA885 /* NSFileManager+LAMSkipBackup.h */,
+				4F3BDB051A0D4AE900BBA885 /* NSFileManager+LAMSkipBackup.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -458,6 +463,7 @@
 				4F93659A19A0578000F8B95A /* LAMShowCell.m in Sources */,
 				4F9E9B3D19A02F6E005C4DE9 /* LAMUserVC.m in Sources */,
 				4F8F47A2199FA62A004EB27A /* LAMTabMainVC.m in Sources */,
+				4F3BDB061A0D4AE900BBA885 /* NSFileManager+LAMSkipBackup.m in Sources */,
 				4F8F4796199F7A0A004EB27A /* LAMShuVC.m in Sources */,
 				4F8F4799199F88C5004EB27A /* LAMQiVC.m in Sources */,
 				4F8F479C199F8A83004EB27A /* LAMJuVC.m in Sources */,

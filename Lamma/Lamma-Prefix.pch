@@ -16,6 +16,7 @@
     #import <NyaruDB.h>
     #import <SVProgressHUD.h>
     #import <AFNetworking.h>
+    #import "NSFileManager+LAMSkipBackup.h"
 #endif
 
 #define LAMSERVER @"http://lamma.teawhen.com"

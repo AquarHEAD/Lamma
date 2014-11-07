@@ -87,6 +87,7 @@
         thisShow.downloadTask = [manager downloadTaskWithRequest:request progress:nil destination:^NSURL *(NSURL *targetPath, NSURLResponse *response) {
             return thisShow.localFile;
         } completionHandler:^(NSURLResponse *response, NSURL *filePath, NSError *error) {
+            [[NSFileManager defaultManager] skipBackup:filePath];
             thisCell.indicator.hidden = YES;
             if (error) {
                 thisShow.status = LAMSHOWSTAT_TODOWNLOAD;
