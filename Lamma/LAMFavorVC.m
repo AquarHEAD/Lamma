@@ -30,11 +30,10 @@
         for (NSString *idstr in favored) {
             [temp addObject:[LAMShow initFromDictionary:[[col where:@"key" equal:idstr] fetch][0]]];
         }
-        self.shows = [temp copy];
+        self.shows = [[temp sortedArrayUsingDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"date" ascending:NO]]] copy];
         [self.tableView reloadData];
     }
 }
-
 
 #pragma mark - Table view data source
 

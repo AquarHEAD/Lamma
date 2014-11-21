@@ -50,7 +50,14 @@
             NyaruDB *db = [NyaruDB instance];
             NyaruCollection *col = [db collection:@"shows"];
             for (NSDictionary *dict in responseObject) {
-                [col put:dict];
+                NSMutableDictionary *nd = [NSMutableDictionary dictionaryWithDictionary:dict];
+                static ISO8601DateFormatter *form = nil;
+                static dispatch_once_t onceToken;
+                dispatch_once(&onceToken, ^{
+                    form = [ISO8601DateFormatter new];
+                });
+                nd[@"date"] = [form dateFromString:nd[@"date"]];
+                [col put:nd];
             }
             [col waitForWriting];
             [self loadDatabase];
@@ -72,7 +79,7 @@
     for (NSDictionary *doc in docs) {
         [temp addObject:[LAMShow initFromDictionary:doc]];
     }
-    self.shows = [temp copy];
+    self.shows = [[temp sortedArrayUsingDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"date" ascending:NO]]] copy];
     [self.tableView reloadData];
 }
 

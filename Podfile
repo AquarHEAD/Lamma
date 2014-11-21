@@ -5,3 +5,4 @@ pod 'AFNetworking', '~> 2.0'
 pod 'SVProgressHUD', :head
 pod 'StaticDataTableViewController', :git => 'git@github.com:xelvenone/StaticDataTableViewController.git'
 pod 'NyaruDB'
+pod 'ISO8601DateFormatter'

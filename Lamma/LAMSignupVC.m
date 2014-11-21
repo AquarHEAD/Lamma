@@ -84,8 +84,8 @@
 - (IBAction)submit:(id)sender {
     if (self.funcSeg.selectedSegmentIndex == 0) {
         // signup
-        if (self.usernameField.text.length < 4) {
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"请输入不少于4位的用户名" message:nil delegate:nil cancelButtonTitle:@"好" otherButtonTitles:nil];
+        if (self.usernameField.text.length < 1) {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"请输入用户名" message:nil delegate:nil cancelButtonTitle:@"好" otherButtonTitles:nil];
             [alert show];
             [self.usernameField becomeFirstResponder];
             return;
@@ -138,7 +138,7 @@
     }
     else {
         // login
-        if (self.usernameField.text.length < 4) {
+        if (self.usernameField.text.length < 1) {
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"请输入用户名" message:nil delegate:nil cancelButtonTitle:@"好" otherButtonTitles:nil];
             [alert show];
             [self.usernameField becomeFirstResponder];
