@@ -121,13 +121,14 @@
         AFHTTPRequestOperationManager *man = [AFHTTPRequestOperationManager manager];
         NSString *reqAddr = [NSString stringWithFormat:@"%@/user/reg", LAMSERVER];
         [man GET:reqAddr parameters:regParams success:^(AFHTTPRequestOperation *operation, id responseObject) {
-            if (responseObject[@"result"]) {
+            if ([responseObject[@"result"] boolValue]) {
                 [SVProgressHUD showSuccessWithStatus:@"注册成功!"];
                 self.funcSeg.selectedSegmentIndex = 1;
                 [self.timer invalidate];
                 [self funcSegChanged:self];
             }
             else {
+                [SVProgressHUD showErrorWithStatus:@"注册失败..."];
                 UIAlertView *alert = [[UIAlertView alloc] initWithTitle:responseObject[@"error"] message:nil delegate:nil cancelButtonTitle:@"好" otherButtonTitles:nil];
                 [alert show];
             }
@@ -157,13 +158,14 @@
         AFHTTPRequestOperationManager *man = [AFHTTPRequestOperationManager manager];
         NSString *reqAddr = [NSString stringWithFormat:@"%@/user/login", LAMSERVER];
         [man GET:reqAddr parameters:loginParams success:^(AFHTTPRequestOperation *operation, id responseObject) {
-            if (responseObject[@"result"]) {
+            if ([responseObject[@"result"] boolValue]) {
                 [SVProgressHUD showSuccessWithStatus:@"登录成功!"];
                 [[NSUserDefaults standardUserDefaults] setObject:responseObject[@"username"] forKey:@"username"];
                 [[NSUserDefaults standardUserDefaults] setObject:responseObject[@"token"] forKey:@"token"];
                 [self performSegueWithIdentifier:@"toOnboard" sender:self];
             }
             else {
+                [SVProgressHUD showErrorWithStatus:@"登录失败..."];
                 UIAlertView *alert = [[UIAlertView alloc] initWithTitle:responseObject[@"error"] message:nil delegate:nil cancelButtonTitle:@"好" otherButtonTitles:nil];
                 [alert show];
             }

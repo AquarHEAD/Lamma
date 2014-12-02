@@ -39,7 +39,7 @@
     else {
         show.favored = NO;
     }
-    return show;
+    return show; 
 }
 
 @end
